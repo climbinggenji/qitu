@@ -528,8 +528,8 @@ ul {
     margin-left: 30px
 }
 
-.ml70 {
-    margin-left: 70px
+.ml90 {
+    margin-left: 90px
 }
 
 .mb0 {
@@ -654,4 +654,10 @@ menu,
 nav,
 section {
     display: block
+}
+
+.contain {
+    width: 1258px;
+    min-width: 1002px;
+    margin: 0 auto;
 }
