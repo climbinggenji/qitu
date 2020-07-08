@@ -13,13 +13,17 @@
 <body>
     <!-- 顶部导航 -->
     <div id="header" class="header">
-        <div class="header-content">
+        <div class="header-content contain">
             <div class="header-content-logo fl">
                 <a href="index.html" style="background: url('./assets/imgs/logo.png') 100% no-repeat;"></a>
             </div>
             <div class="header-content-nav">
                 <ul>
-                    <li><a href="">热门下载</a></li>
+                    <li>
+                        <a href="">热门下载</a>
+                        <!-- 次级导航 -->
+                        <div class="secondary"></div>
+                    </li>
                     <li><a href="">平面广告</a></li>
                     <li><a href="">视频/动画</a></li>
                     <li><a href="">背景/摄影</a></li>
@@ -54,12 +58,31 @@
             </div>
             <!-- 搜索框 -->
             <div class="slide-search">
-                <div class="slide-search-select"><span class="select-text">图片</span><span
-                        class="select-icon ml8"></span></div>
+                <div class="slide-search-select">
+                    <span class="select-text">图片</span>
+                    <span class="select-icon ml8"></span>
+                    <div class="select-option">
+                        <ul>
+                            <a href="">
+                                <li>全部</li>
+                            </a>
+                            <a href="">
+                                <li class="active">图片</li>
+                            </a>
+                            <a href="">
+                                <li>视频</li>
+                            </a>
+                            <a href="">
+                                <li>照片</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hot-words"></div>
                 <input type="text" class="slide-search-text" placeholder="输入关键词，素材标号搜索">
                 <a href="" class="slide-search-btn"></a>
             </div>
-            <div class="slide-nav">
+            <div class="slide-nav contain">
                 <ul>
                     <li class="active"><a href="">建党九十九周年</a></li>
                     <li><a href="">端午节</a></li>
@@ -72,34 +95,12 @@
         </div>
     </div>
     <!-- 精选专题 -->
-    <div class="special">
+    <div class="special contain">
         <p class="title">精选专题</p>
         <p class="title-desc">每日更新热点专题</p>
         <div class="special-items clearfix mt25">
-            <a href="" class="special-items-box fl mr22">
-                <img src="assets/imgs/special.png">
-                <div class="special-mask"></div>
-                <div class="special-title">
-                    七一建党节
-                </div>
-                <div class="special-hover">
-                    <div class="special-hover-tag">元素</div>
-                    <div class="special-hover-title">七一建党节</div>
-                </div>
-            </a>
-            <a href="" class="special-items-box fl mr22">
-                <img src="assets/imgs/special.png">
-                <div class="special-mask"></div>
-                <div class="special-title">
-                    七一建党节
-                </div>
-                <div class="special-hover">
-                    <div class="special-hover-tag">元素</div>
-                    <div class="special-hover-title">七一建党节</div>
-                </div>
-            </a>
-            <a href="" class="special-items-box fl mr22">
-                <img src="assets/imgs/special.png">
+            <a href="" class="special-items-box fl">
+                <img class="special-img" src="assets/imgs/special.png">
                 <div class="special-mask"></div>
                 <div class="special-title">
                     七一建党节
@@ -110,7 +111,29 @@
                 </div>
             </a>
             <a href="" class="special-items-box fl">
-                <img src="assets/imgs/special.png">
+                <img class="special-img" src="assets/imgs/special.png">
+                <div class="special-mask"></div>
+                <div class="special-title">
+                    七一建党节
+                </div>
+                <div class="special-hover">
+                    <div class="special-hover-tag">元素</div>
+                    <div class="special-hover-title">七一建党节</div>
+                </div>
+            </a>
+            <a href="" class="special-items-box fl">
+                <img class="special-img" src="assets/imgs/special.png">
+                <div class="special-mask"></div>
+                <div class="special-title">
+                    七一建党节
+                </div>
+                <div class="special-hover">
+                    <div class="special-hover-tag">元素</div>
+                    <div class="special-hover-title">七一建党节</div>
+                </div>
+            </a>
+            <a href="" class="special-items-box fl">
+                <img class="special-img" src="assets/imgs/special.png">
                 <div class="special-mask"></div>
                 <div class="special-title">
                     七一建党节
@@ -122,11 +145,11 @@
             </a>
         </div>
         <div class="btn-index-more mt20">
-            <a  href="" class="btn-index-more">查看更多</a>
+            <a href="" class="btn-index-more">查看更多</a>
         </div>
     </div>
     <!-- 热门素材 -->
-    <div class="hot">
+    <div class="hot contain">
         <p class="title">热门素材</p>
         <p class="title-desc">快人一步，关注设计潮流</p>
         <div class="hot-nav btn-index-nav clearfix mt25">
@@ -257,7 +280,7 @@
         </div>
     </div>
     <!-- UI设计 -->
-    <div class="design">
+    <div class="design contain">
         <p class="title">UI设计</p>
         <div class="design-nav btn-index-nav clearfix mt25">
             <ul>
@@ -387,7 +410,7 @@
         </div>
     </div>
     <!-- 平面广告 -->
-    <div class="printads">
+    <div class="printads contain">
         <p class="title">平面广告</p>
         <div class="printads-nav btn-index-nav clearfix mt25">
             <ul>
@@ -517,7 +540,7 @@
         </div>
     </div>
     <!-- 设计文章 -->
-    <div class="article">
+    <div class="article contain">
         <p class="title">设计文章</p>
         <p class="title-desc font20">了解2020年最火的设计资讯</p>
         <div class="article-items mt25 clearfix">
@@ -525,7 +548,8 @@
                 <img src="assets/imgs/article.png" alt="">
                 <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
                 <div class="divider-e5"></div>
-                <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的 20 条表单和输入框的设计经验，实用性极强。</div>
+                <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
+                    20 条表单和输入框的设计经验，实用性极强。</div>
                 <div class="article-box-time font12">2020-06-19</div>
                 <div class="article-box-readed font12">2680</div>
             </div>
@@ -533,7 +557,8 @@
                 <img src="assets/imgs/article.png" alt="">
                 <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
                 <div class="divider-e5"></div>
-                <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的 20 条表单和输入框的设计经验，实用性极强。</div>
+                <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
+                    20 条表单和输入框的设计经验，实用性极强。</div>
                 <div class="article-box-time font12">2020-06-19</div>
                 <div class="article-box-readed font12">2680</div>
             </div>
@@ -541,7 +566,8 @@
                 <img src="assets/imgs/article.png" alt="">
                 <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
                 <div class="divider-e5"></div>
-                <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的 20 条表单和输入框的设计经验，实用性极强。</div>
+                <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
+                    20 条表单和输入框的设计经验，实用性极强。</div>
                 <div class="article-box-time font12">2020-06-19</div>
                 <div class="article-box-readed font12">2680</div>
             </div>
@@ -552,7 +578,7 @@
     </div>
     <!-- 页面底部 -->
     <div class="footer mt80">
-        <div class="footer-main clearfix">
+        <div class="footer-main contain clearfix">
             <div class="footer-about fl">
                 <div class="footer-main-title">关于我们</div>
                 <div class="footer-about-content font14">
@@ -597,7 +623,7 @@
                     400-810-1234
                 </div>
                 <div class="footer-customer-time mt15 font14">
-                    工作时间   9 : 00-18 : 00
+                    工作时间 9 : 00-18 : 00
                 </div>
                 <a href="">
                     <div class="footer-customer-qq mt15">
@@ -607,7 +633,7 @@
                 </a>
             </div>
         </div>
-        <div class="footer-links font14">
+        <div class="footer-links contain font14">
             <div class="footer-links-title mt20">
                 为您推荐
             </div>
@@ -641,32 +667,26 @@
     </div>
     <!-- 右下角固定导航 -->
     <div class="bottom-nav clearfix">
-        <div class="icon-detail fl font12">
-            <a href="">
-                <div class="icon-detail-list bb1">意见反馈</div>
-            </a>
-            <a href="">
-                <div class="icon-detail-list bb1">在线客服</div>
-            </a>
-            <a href="">
-                <div class="icon-detail-list bb1">签约设计师</div>
-            </a>
-            <a href="#header">
-                <div class="icon-detail-list">回到顶部</div>
-            </a>
-        </div>
         <div class="icon-list fl">
             <a href="">
-                <div class="icon-list-item icon-list-item1 bb"></div>
+                <div class="icon-list-item icon-list-item1 bb">
+                    <div class="detail">意见反馈</div>
+                </div>
             </a>
             <a href="">
-                <div class="icon-list-item icon-list-item2 bb"></div>
+                <div class="icon-list-item icon-list-item2 bb">
+                    <div class="detail">在线客服</div>
+                </div>
             </a>
             <a href="">
-                <div class="icon-list-item icon-list-item3 bb"></div>
+                <div class="icon-list-item icon-list-item3 bb">
+                    <div class="detail">签约设计师</div>
+                </div>
             </a>
             <a href="#header">
-                <div class="icon-list-item icon-list-item4"></div>
+                <div class="icon-list-item icon-list-item4">
+                    <div class="detail">回到顶部</div>
+                </div>
             </a>
         </div>
     </div>

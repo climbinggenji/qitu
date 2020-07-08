@@ -657,7 +657,11 @@ section {
 }
 
 .contain {
-    width: 1258px;
-    min-width: 1002px;
+    width: 1002px;
     margin: 0 auto;
+}
+@media screen and (min-width: 1280px) {
+    .contain {
+        width: 1258px;
+    }
 }
