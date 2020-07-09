@@ -19,7 +19,7 @@
             </div>
             <div class="header-content-nav">
                 <ul>
-                    <li>
+                    <li class="active">
                         <a href="">热门下载</a>
                         <!-- 次级导航 -->
                         <div class="secondary"></div>
@@ -35,16 +35,14 @@
                 </ul>
             </div>
             <div class="header-content-user fr">
-                <ul>
-                    <li>
-                        <a href="/" class="vip-box mr15">
-                            个人VIP
-                        </a>
-                    </li>
-                    <li class="mr5"><a href="">登录</a></li>
-                    <li class="mr5">/</li>
-                    <li><a href="">注册</a></li>
-                </ul>
+                <a href="/" class="vip-box mr15">
+                    个人VIP
+                </a>
+                <a href="">
+                    <div class="btn-login fr mt18 font14">
+                        登录
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -61,6 +59,7 @@
                 <div class="slide-search-select">
                     <span class="select-text">图片</span>
                     <span class="select-icon ml8"></span>
+                    <div class="select-divider divider-vertical-e6"></div>
                     <div class="select-option">
                         <ul>
                             <a href="">
@@ -78,7 +77,19 @@
                         </ul>
                     </div>
                 </div>
-                <div class="hot-words"></div>
+                <div class="hot-words">
+                    <ul>
+                        <li>热搜词：</li>
+                        <li><a href="">海报设计</a></li>
+                        <li><a href="">端午</a></li>
+                        <li><a href="">名片</a></li>
+                        <li><a href="">食物</a></li>
+                        <li><a href="">字体设计</a></li>
+                        <li><a href="">党建文化</a></li>
+                        <li><a href="">壁纸</a></li>
+                        <li><a href="">招聘</a></li>
+                    </ul>
+                </div>
                 <input type="text" class="slide-search-text" placeholder="输入关键词，素材标号搜索">
                 <a href="" class="slide-search-btn"></a>
             </div>
@@ -634,8 +645,9 @@
             </div>
         </div>
         <div class="footer-links contain font14">
-            <div class="footer-links-title mt20">
-                为您推荐
+            <div class="footer-links-title mt20 clearfix">
+                <div class="fl">为您推荐</div>
+                <div class="arrow-icon fl ml10"></div>
             </div>
             <div class="footer-links-nav clearfix mt12">
                 <ul>
@@ -660,7 +672,7 @@
             </div>
         </div>
         <div class="contain divider-d8 pt20"></div>
-        <div class="copyright font12 mt12">
+        <div class="copyright contain font12 mt12">
             <p>图行天下图库图片内容由用户免费分享产生，若发现您的权利被侵害，请联系photophoto.cn@163.com，我们尽快处理</p>
             <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 网站统计 站长统计</p>
         </div>
