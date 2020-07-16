@@ -1,0 +1,6 @@
+.user-menu { width: 200px; padding: 40px; background: #ffffff; border-radius: 4px; margin-top: 30px; }
+
+.user-menu > ul li { line-height: 50px; text-align: center; }
+
+.user-menu > ul .active { color: #e02e2e; }
+/*# sourceMappingURL=user.min.css.map */

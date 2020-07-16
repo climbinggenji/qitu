@@ -33,7 +33,6 @@ html {
     overflow-y: auto
 }
 
-.arrow,
 .ellipsis,
 .overflow-hidden,
 .wordwrap,
@@ -92,7 +91,7 @@ ul {
 
 body {
     font: 16px "微软雅黑";
-    background-color: #f5f9fa;
+    background-color: #f2f6f7;
     font-weight: 400;
 }
 
@@ -313,14 +312,6 @@ ul {
 
 .hover-none:hover {
     text-decoration: none
-}
-
-.arrow {
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-    border-style: solid
 }
 
 .for-vertical {

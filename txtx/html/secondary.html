@@ -3,30 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>次级页面</title>
     <link rel="stylesheet" href="../css/txtx.css">
     <link rel="stylesheet" href="../css/common.min.css">
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
 </head>
 <body>
-    <div id="header" class="header"></div>
+    <script src="../js/header.js"></script>
     <div id="search">
         <div class="search-box">
             <div class="search">
                 <div class="search-select fl">
                     <span class="search-select-text font14">图片</span>
                     <span class="search-select-icon ml8"></span>
+                    <div class="search-select-options">
+                        <ul>
+                            <li class="active">全部</li>
+                            <li>图片</li>
+                            <li>视频</li>
+                            <li>照片</li>
+                        </ul>
+                    </div>
                 </div>
                 <input class="search-text fl font14" type="text" placeholder="输入关键词，素材标号搜索">
                 <div class="search-btn fl"></div>
             </div>
         </div>
     </div>
-    <div id="foot" class="footer mt80"></div>
+    <!-- 次级页面背景图 -->
+    <div class="banner"></div>
+    <!-- 面包屑导航 -->
+    <div id="bread">
+        <div class="bread-list contain clearfix">
+            <ul>
+                <li>当前位置：</li>
+                <li><a href="../index.html">首页</a></li>
+                <li><span>></span><a href="">平面广告</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 次级页面导航菜单 -->
+    <div id="menu">
+        <div class="menu contain clearfix">
+            <div class="menu-nav fl">
+                <ul>
+                    <li>综合排序<span></span></li>
+                    <li>素材类型<span></span></li>
+                    <li>
+                        平面广告<span></span>
+                        <div class="menu-nav-options">
+                            <ul>
+                                <li>全部</li>
+                                <li>视频/动画</li>
+                                <li>办公素材</li>
+                                <li>电商设计</li>
+                                <li>UI设计</li>
+                            </ul>
+                            <ul>
+                                <li>平面设计</li>
+                                <li class="active">背景/摄影</li>
+                                <li>样式/插件</li>
+                                <li>元素/插画</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>全部<span></span></li>
+                    <li>格式<span></span></li>
+                    <li>颜色<span></span></li>
+                </ul>
+            </div>
+            <div class="paging-mini fr">
+                <i class="icon icon-left iconfont">&#xe779;</i>
+                <span id="paging-mini-current" class="current ml20">1</span>
+                <span class="slash">/</span>
+                <span id="paging-mini-count" class="mr20">28</span>
+                <i class="icon icon-right iconfont">&#xe775;</i>
+            </div>
+        </div>
+    </div>
+    <!-- 次级页面内容 -->
+    <div class="secondary-content contain">
+        <div class="flex-images mt30">
+            <div class="item" data-w="200" data-h="150">
+                <a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div>
+            </div>
+            <div class="item" data-w="250" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="150" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="150" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="200" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="100" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="180" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="185" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="350" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="200" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="165" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="150" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="120" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="120" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="140" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="200" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+            <div class="item" data-w="170" data-h="150"><a href="">
+                    <div class="item-img">
+                        <img src="../imgs/preview.png">
+                    </div>
+                </a>
+                <a href="" class="preview-mask"></a>
+                <div class="preview-main">
+                    <div class="preview-main-tag clearfix">
+                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <div class="preview-main-favor fl">
+                            <span class="favor-text font12">收藏</span>
+                        </div>
+                        <div class="preview-main-colected font12 fl">已收藏</div>
+                    </div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
+                </div></div>
+        </div>
+    </div>
+    <!-- 分页器 -->
+    <div id="page" class="clearfix">
+        <div class="page mt40">
+            <div class="page-up btn" data-value="up">上一页</div>
+            <div class="page-list"></div>
+            <div class="page-down btn" data-value="down">下一页</div>
+            <div class="page-current">到<input id="page-go" value="1">页</div>
+            <div class="page-go btn"  data-value="go">前往</div>
+        </div>
+    </div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/plugins/paging.js"></script>
+    <script src="../js/plugins/jquery.flex-images.min.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
     <script>
-        $('#header').load('header.html');
-        $('#foot').load('footer.html');
+        $(function() {
+            var pageDefault = {
+                count: 181,
+                pageCount: 20,
+                pageCurrent: 2
+            }
+            pageDefault.total = Math.ceil(pageDefault.count/pageDefault.pageCount);
+            console.log(pageDefault.total);
+            $('.page').paging(pageDefault);
+            $('.page').on('click', '.btn', function() {
+                var val = $(this).data('value')
+                if (typeof val == 'number') {
+                    pageDefault.pageCurrent = val;
+                    $('.page').paging(pageDefault, val);
+                } else if (typeof val == 'string') {
+                    if (val == 'go') {
+                        var pageGo = parseInt($('#page-go').val());
+                        if (pageGo>0 && pageGo<=pageDefault.total) {
+                            pageDefault.pageCurrent = pageGo;
+                            console.log(typeof pageGo)
+                            $('.page').paging(pageDefault, pageGo);
+                        }
+                    } else {
+                        if (val == 'up') {
+                            if (pageDefault.pageCurrent != 1) {
+                                $('.page').paging(pageDefault, val);
+                                pageDefault.pageCurrent -= 1;
+                            }
+                        } else {
+                            if (pageDefault.pageCurrent-1 != pageDefault.total) {
+                                $('.page').paging(pageDefault, val);
+                                pageDefault.pageCurrent += 1;
+                            }
+                        }
+                    }
+                }
+            })
+        })
     </script>
+    
 </body>
 </html>

@@ -2,21 +2,37 @@
 <html lang="en">
 
 <head>
+    <script type="text/javascript">
+        var t1 = new Date().getTime();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图行天下</title>
     <link rel="stylesheet" href="./css/txtx.css">
+    <link rel="stylesheet" href="./css/common.min.css">
     <link rel="stylesheet" href="./css/index.min.css">
+    <link rel="stylesheet" href="./css/iconfont/iconfont.css">
     <script src="./js/jquery.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/plugins/jquery.slider.min.js"></script>
+    <script src="./js/common.js"></script>
+    <!-- <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/txtx.css">
+    <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/common.min.css">
+    <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/index.min.css">
+    <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/iconfont/iconfont.css">
+    <script src="//js.photophoto.cn/web/v1/js/jquery.min.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/index.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/plugins/jquery.slider.min.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/common.js"></script> -->
 </head>
 
 <body>
     <!-- 顶部导航 -->
+    <div id="top"></div>
     <div id="header" class="header">
-        <div class="header-content contain">
+        <div class="header-content contain clearfix">
             <div class="header-content-logo fl">
-                <a href="index.html" style="background: url('./assets/imgs/logo.png') 100% no-repeat;"></a>
+                <a href="index.html" style="background: url('//js.photophoto.cn/web/v1/imgs/logo.png') 100% no-repeat;"></a>
             </div>
             <div class="header-content-nav">
                 <ul>
@@ -25,9 +41,9 @@
                         <!-- 次级导航 -->
                         <div class="secondary"></div>
                     </li>
-                    <li><a href="">平面广告</a></li>
+                    <li><a href="html/secondary.html">平面广告</a></li>
                     <li><a href="">视频/动画</a></li>
-                    <li><a href="">背景/摄影</a></li>
+                    <li><a href="">背景 /摄影</a></li>
                     <li><a href="">办公素材</a></li>
                     <li><a href="">样式/插件</a></li>
                     <li><a href="">电商设计</a></li>
@@ -70,45 +86,84 @@
                 </div>
             </div>
             <div class="header-content-user fr">
-                <a href="/" class="vip-box mr15">
+                <a href="html/user.html" class="vip-box mr15">
                     个人VIP
                 </a>
-                <a href="">
-                    <div class="btn-login fr mt18 font14">
-                        登录
-                    </div>
-                </a>
+                <div class="btn-login fr mt18 font14">
+                    登录
+                </div>
             </div>
         </div>
     </div>
+    <!-- 登录注册 -->
+    <div id="login-box" class="login">
+        <div class="login-box-close">
+            <i class="iconfont">&#xe607;</i>
+        </div>
+        <div class="login-box">
+            <div class="login-header clearfix">
+                <div class="login-header-left fl">
+                    <span class="login-title">手机登录</span>
+                    <span class="register-title">短信注册</span>
+                </div>
+                <div class="login-header-right fr">直接登录 <i class="iconfont">&#xe600;</i></div>
+            </div>
+            <div class="login-divider"></div>
+            <div class="login-phone clearfix">
+                <div class="login-phone-code fl">
+                    <input id="login-phone-code" type="text">
+                    <div class="code-select-icon"><i class="iconfont">&#xe690;</i></div>
+                </div>
+                <div class="login-phone-number fl">
+                    <input id="login-phone-number" type="number" placeholder="输入手机号">
+                </div>
+            </div>
+            <div id="slide" class="slide mt20"></div>
+            <div class="login-verify clearfix mt20">
+                <input id="login-verify-code" type="text" placeholder="输入验证码">
+                <div class="login-verify-btn btn">发送验证码</div>
+            </div>
+            <div class="login-password mt20">
+                <input id="login-password" type="text" placeholder="输入密码">
+                <div class="login-password-icon">
+                    <i class="iconfont">&#xe608;</i>
+                </div>
+            </div>
+            <div class="login-agree">
+                <div class="login-agree-radio">
+                    <input id="agreement" name="agreement" type="checkbox" hidden>
+                    <label for="agreement" class="agree-radio"></label>
+                    已阅读并同意<a href="">《用户协议》</a>
+                </div>
+            </div>
+            <div class="login-toRegister">没有账号？</div>
+            <div class="register-btn btn">立即注册</div>
+            <div class="login-btn btn">登录</div>
+            <div class="third-text"><span>第三方账号登录</span></div>
+        </div>
+        <div class="qrcode-box"></div>
+    </div>
+    <div id="mask"></div>
     <!-- 搜索框，轮播图 -->
     <div class="banner">
         <!-- 轮播图 -->
-        <div class="slide">
-            <div class="slide-image">
+        <div class="swiper">
+            <div class="swiper-image">
                 <a href="/"
-                    style="background: url('./assets/imgs/banner.png') center center / auto 100% no-repeat;"></a>
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/banner.png') center center / auto 100% no-repeat;"></a>
             </div>
             <!-- 搜索框 -->
-            <div class="slide-search">
-                <div class="slide-search-select">
-                    <span class="select-text">图片</span>
+            <div class="swiper-search">
+                <div class="swiper-search-select">
+                    <span class="select-text">全部</span>
                     <span class="select-icon ml8"></span>
                     <div class="select-divider divider-vertical-e6"></div>
                     <div class="select-option">
                         <ul>
-                            <a href="">
-                                <li>全部</li>
-                            </a>
-                            <a href="">
-                                <li class="active">图片</li>
-                            </a>
-                            <a href="">
-                                <li>视频</li>
-                            </a>
-                            <a href="">
-                                <li>照片</li>
-                            </a>
+                            <li class="active">全部</li>
+                            <li>图片</li>
+                            <li>视频</li>
+                            <li>照片</li>
                         </ul>
                     </div>
                 </div>
@@ -125,10 +180,10 @@
                         <li><a href="">招聘</a></li>
                     </ul>
                 </div>
-                <input type="text" class="slide-search-text" placeholder="输入关键词，素材标号搜索">
-                <a href="" class="slide-search-btn"></a>
+                <input type="text" class="swiper-search-text" placeholder="输入关键词，素材标号搜索">
+                <a href="" class="swiper-search-btn"></a>
             </div>
-            <div class="slide-nav contain">
+            <div class="swiper-nav contain">
                 <ul>
                     <li class="active"><a href="">建党九十九周年</a></li>
                     <li><a href="">端午节</a></li>
@@ -146,7 +201,7 @@
         <p class="title-desc">每日更新热点专题</p>
         <div class="special-items clearfix mt25">
             <a href="" class="special-items-box fl">
-                <img class="special-img" src="assets/imgs/special.png">
+                <img class="special-img" src="//js.photophoto.cn/web/v1/imgs/special.png">
                 <div class="special-mask"></div>
                 <div class="special-title">
                     七一建党节
@@ -157,7 +212,7 @@
                 </div>
             </a>
             <a href="" class="special-items-box fl">
-                <img class="special-img" src="assets/imgs/special.png">
+                <img class="special-img" src="//js.photophoto.cn/web/v1/imgs/special.png">
                 <div class="special-mask"></div>
                 <div class="special-title">
                     七一建党节
@@ -168,7 +223,7 @@
                 </div>
             </a>
             <a href="" class="special-items-box fl">
-                <img class="special-img" src="assets/imgs/special.png">
+                <img class="special-img" src="//js.photophoto.cn/web/v1/imgs/special.png">
                 <div class="special-mask"></div>
                 <div class="special-title">
                     七一建党节
@@ -179,7 +234,7 @@
                 </div>
             </a>
             <a href="" class="special-items-box fl">
-                <img class="special-img" src="assets/imgs/special.png">
+                <img class="special-img" src="//js.photophoto.cn/web/v1/imgs/special.png">
                 <div class="special-mask"></div>
                 <div class="special-title">
                     七一建党节
@@ -191,7 +246,7 @@
             </a>
         </div>
         <div class="btn-index-more mt20">
-            <a href="" class="btn-index-more">查看更多</a>
+            <a href="html/special.html" class="btn-index-more">查看更多</a>
         </div>
     </div>
     <!-- 热门素材 -->
@@ -212,7 +267,7 @@
         </div>
         <div class="preview-index clearfix">
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix colected">
@@ -222,11 +277,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -236,11 +291,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -250,11 +305,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -264,11 +319,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -278,11 +333,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -292,11 +347,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -306,11 +361,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -320,7 +375,7 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
         </div>
@@ -339,7 +394,7 @@
         </div>
         <div class="preview-index clearfix">
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -349,11 +404,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -363,11 +418,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -377,11 +432,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -391,11 +446,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -405,11 +460,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -419,11 +474,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -433,11 +488,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -447,7 +502,7 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
         </div>
@@ -469,7 +524,7 @@
         </div>
         <div class="preview-index clearfix">
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -479,11 +534,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -493,11 +548,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -507,11 +562,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -521,11 +576,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -535,11 +590,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -549,11 +604,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -563,11 +618,11 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
             <div class="preview-box">
-                <img src="assets/imgs/preview.png" alt="">
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
                 <a href="" class="preview-mask"></a>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix">
@@ -577,7 +632,7 @@
                         </div>
                         <div class="preview-main-colected font12 fl">已收藏</div>
                     </div>
-                    <div class="preview-main-title">海报 · 5G急速网络</div>
+                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
         </div>
@@ -591,7 +646,7 @@
         <p class="title-desc font20">了解2020年最火的设计资讯</p>
         <div class="article-items mt25 clearfix">
             <div class="article-box">
-                <img src="assets/imgs/article.png" alt="">
+                <img src="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
                 <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
                 <div class="divider-e5"></div>
                 <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
@@ -600,7 +655,7 @@
                 <div class="article-box-readed font12">2680</div>
             </div>
             <div class="article-box">
-                <img src="assets/imgs/article.png" alt="">
+                <img src="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
                 <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
                 <div class="divider-e5"></div>
                 <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
@@ -609,7 +664,7 @@
                 <div class="article-box-readed font12">2680</div>
             </div>
             <div class="article-box">
-                <img src="assets/imgs/article.png" alt="">
+                <img src="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
                 <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
                 <div class="divider-e5"></div>
                 <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
@@ -673,7 +728,7 @@
                 </div>
                 <a href="">
                     <div class="footer-customer-qq mt15">
-                        <img src="assets/imgs/qq.png" alt="">
+                        <img src="//js.photophoto.cn/web/v1/imgs/qq.png" alt="">
                         在线客服
                     </div>
                 </a>
@@ -706,8 +761,9 @@
                 </ul>
             </div>
         </div>
-        <div class="contain divider-d8 pt20"></div>
+        <div class="copyright-space"></div>
         <div class="copyright contain font12 mt12">
+            <div class="divider-d8 mb18"></div>
             <p>图行天下图库图片内容由用户免费分享产生，若发现您的权利被侵害，请联系photophoto.cn@163.com，我们尽快处理</p>
             <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 网站统计 站长统计</p>
         </div>
@@ -730,13 +786,21 @@
                     <div class="detail">签约设计师</div>
                 </div>
             </a>
-            <a href="#header">
+            <a href="#top">
                 <div class="icon-list-item icon-list-item4">
                     <div class="detail">回到顶部</div>
                 </div>
             </a>
         </div>
     </div>
+    <!-- <script src="./js/plugins/lazyload.min.js"></script> -->
+    <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
+    <script>
+        window.onload = function()
+        {
+            console.log(new Date().getTime()-t1)
+        }
+    </script>
 </body>
 
 </html>

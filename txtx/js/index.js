@@ -7,3 +7,6 @@ window.addEventListener('scroll', function() {
         $('#header').removeClass('header-fixed');
     }
 })
+$(function() {
+    $(".lazy").lazyload();
+})
