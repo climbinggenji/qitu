@@ -8,14 +8,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图行天下</title>
-    <link rel="stylesheet" href="./css/txtx.css">
-    <link rel="stylesheet" href="./css/common.min.css">
-    <link rel="stylesheet" href="./css/index.min.css">
-    <link rel="stylesheet" href="./css/iconfont/iconfont.css">
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/plugins/jquery.slider.min.js"></script>
-    <script src="./js/common.js"></script>
+    <link rel="stylesheet" href="css/txtx.css">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/plugins/jquery.slider.min.js"></script>
+    <script src="js/common.js"></script>
     <!-- <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/txtx.css">
     <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/common.min.css">
     <link rel="stylesheet" href="//js.photophoto.cn/web/v1/css/index.min.css">
@@ -32,7 +32,8 @@
     <div id="header" class="header">
         <div class="header-content contain clearfix">
             <div class="header-content-logo fl">
-                <a href="index.html" style="background: url('//js.photophoto.cn/web/v1/imgs/logo.png') 100% no-repeat;"></a>
+                <a href="index.html"
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/logo.png') 100% no-repeat;"></a>
             </div>
             <div class="header-content-nav">
                 <ul>
@@ -57,7 +58,7 @@
                     <div class="main-nav-list">
                         <ul>
                             <li><a href="">平面广告</a></li>
-                            <li class="active"><a href="">视频 / 动画</a></li>
+                            <li><a href="">视频 / 动画</a></li>
                             <li><a href="">背景 / 摄影</a></li>
                             <li><a href="">办公文档</a></li>
                             <li><a href="">样式 / 插件</a></li>
@@ -100,22 +101,22 @@
         <div class="login-box-close">
             <i class="iconfont">&#xe607;</i>
         </div>
-        <div class="login-box">
-            <div class="login-header clearfix">
-                <div class="login-header-left fl">
-                    <span class="login-title">手机登录</span>
-                    <span class="register-title">短信注册</span>
-                </div>
-                <div class="login-header-right fr">直接登录 <i class="iconfont">&#xe600;</i></div>
+        <div class="login-header clearfix">
+            <div class="login-header-left fl">
+                <span class="login-title">手机登录</span>
+                <span class="register-title">短信注册</span>
             </div>
-            <div class="login-divider"></div>
+            <div class="login-header-right right-register fr">直接登录 <i class="iconfont">&#xe600;</i></div>
+        </div>
+        <div class="login-divider"></div>
+        <div class="login-box">
             <div class="login-phone clearfix">
                 <div class="login-phone-code fl">
-                    <input id="login-phone-code" type="text">
+                    <input id="login-phone-code" type="text" value="+86">
                     <div class="code-select-icon"><i class="iconfont">&#xe690;</i></div>
                 </div>
                 <div class="login-phone-number fl">
-                    <input id="login-phone-number" type="number" placeholder="输入手机号">
+                    <input id="login-phone-number" type="text" placeholder="输入手机号">
                 </div>
             </div>
             <div id="slide" class="slide mt20"></div>
@@ -124,10 +125,8 @@
                 <div class="login-verify-btn btn">发送验证码</div>
             </div>
             <div class="login-password mt20">
-                <input id="login-password" type="text" placeholder="输入密码">
-                <div class="login-password-icon">
-                    <i class="iconfont">&#xe608;</i>
-                </div>
+                <input id="login-password" type="password" placeholder="输入密码">
+                <i class="iconfont psw-hide">&#xe606;</i>
             </div>
             <div class="login-agree">
                 <div class="login-agree-radio">
@@ -140,8 +139,14 @@
             <div class="register-btn btn">立即注册</div>
             <div class="login-btn btn">登录</div>
             <div class="third-text"><span>第三方账号登录</span></div>
+            <div class="third-btn mt20">
+                <a onclick="window.open('','QQ登录图行天下', 'width=600,height=520,top=300,resizable=no')"><i
+                        class="iconfont btn-qq">&#xe60a;</i></a>
+                <div class="third-btn-divider"></div>
+                <a onclick="window.open('html/secondary.html','微信登录图行天下', 'width=600,height=520,top=300,resizable=no')"><i
+                        class="iconfont btn-wx">&#xe60c;</i></a>
+            </div>
         </div>
-        <div class="qrcode-box"></div>
     </div>
     <div id="mask"></div>
     <!-- 搜索框，轮播图 -->
@@ -149,6 +154,16 @@
         <!-- 轮播图 -->
         <div class="swiper">
             <div class="swiper-image">
+                <a class="active" href="/"
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/banner.png') center center / auto 100% no-repeat;"></a>
+                <a href="/"
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/banner_secondary.png') center center / auto 100% no-repeat;"></a>
+                <a href="/"
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/banner.png') center center / auto 100% no-repeat;"></a>
+                <a href="/"
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/banner.png') center center / auto 100% no-repeat;"></a>
+                <a href="/"
+                    style="background: url('//js.photophoto.cn/web/v1/imgs/banner.png') center center / auto 100% no-repeat;"></a>
                 <a href="/"
                     style="background: url('//js.photophoto.cn/web/v1/imgs/banner.png') center center / auto 100% no-repeat;"></a>
             </div>
@@ -646,8 +661,8 @@
         <p class="title-desc font20">了解2020年最火的设计资讯</p>
         <div class="article-items mt25 clearfix">
             <div class="article-box">
-                <img src="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
-                <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
+                <a href=""><div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div></a>
                 <div class="divider-e5"></div>
                 <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
                     20 条表单和输入框的设计经验，实用性极强。</div>
@@ -655,8 +670,8 @@
                 <div class="article-box-readed font12">2680</div>
             </div>
             <div class="article-box">
-                <img src="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
-                <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
+                <a href=""><div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div></a>
                 <div class="divider-e5"></div>
                 <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
                     20 条表单和输入框的设计经验，实用性极强。</div>
@@ -664,8 +679,8 @@
                 <div class="article-box-readed font12">2680</div>
             </div>
             <div class="article-box">
-                <img src="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
-                <div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div>
+                <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/article.png" alt="">
+                <a href=""><div class="article-box-title mt15">资深UI设计师搞定输入框的20个秘诀</div></a>
                 <div class="divider-e5"></div>
                 <div class="article-box-preview">这篇文章来自资深设计师 Taras Bakusevych，长期从事金融和企业类数字产品的设计，在表单设计领域造诣精深。这篇文章梳理了他总结的
                     20 条表单和输入框的设计经验，实用性极强。</div>
@@ -741,9 +756,9 @@
             </div>
             <div class="footer-links-nav clearfix mt12">
                 <ul>
-                    <li class="active"><a href="">友情链接</a></li>
-                    <li><a href="">热门搜索</a></li>
-                    <li><a href="">最新素材</a></li>
+                    <li class="active"><a>友情链接</a></li>
+                    <li><a>热门搜索</a></li>
+                    <li><a>最新素材</a></li>
                 </ul>
             </div>
             <div class="footer-links-item clearfix mt15">
@@ -758,6 +773,20 @@
                     <li><a href="">中国品牌网</a></li>
                     <li><a href="">中国品牌网</a></li>
                     <li><a href="">中国品牌网</a></li>
+                </ul>
+                <ul style="display: none;">
+                    <li><a href="">红网</a></li>
+                    <li><a href="">设计栈</a></li>
+                    <li><a href="">好123导航网</a></li>
+                    <li><a href="">中国品牌网</a></li>
+                    <li><a href="">中国品牌网</a></li>
+                    <li><a href="">中国品牌网</a></li>
+                </ul>
+                <ul style="display: none;">
+                    <li><a href="">好123导航网</a></li>
+                    <li><a href="">中国品牌网</a></li>
+                    <li><a href="">图片大全</a></li>
+                    <li><a href="">CAD</a></li>
                 </ul>
             </div>
         </div>
@@ -796,9 +825,8 @@
     <!-- <script src="./js/plugins/lazyload.min.js"></script> -->
     <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
     <script>
-        window.onload = function()
-        {
-            console.log(new Date().getTime()-t1)
+        window.onload = function () {
+            console.log(new Date().getTime() - t1)
         }
     </script>
 </body>

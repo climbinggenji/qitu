@@ -37,9 +37,38 @@ $(function() {
         }
     });
 
+    // 分页器
+    // $('.page').on('click', '.btn', function() {
+    //     var val = $(this).data('value')
+    //     if (typeof val == 'number') {
+    //         pageDefault.pageCurrent = val;
+    //         $('.page').paging(pageDefault, val);
+    //     } else if (typeof val == 'string') {
+    //         if (val == 'go') {
+    //             var pageGo = parseInt($('#page-go').val());
+    //             if (pageGo>0 && pageGo<=pageDefault.total) {
+    //                 pageDefault.pageCurrent = pageGo;
+    //                 console.log(typeof pageGo)
+    //                 $('.page').paging(pageDefault, pageGo);
+    //             }
+    //         } else {
+    //             if (val == 'up') {
+    //                 if (pageDefault.pageCurrent != 1) {
+    //                     $('.page').paging(pageDefault, val);
+    //                     pageDefault.pageCurrent -= 1;
+    //                 }
+    //             } else {
+    //                 if (pageDefault.pageCurrent-1 != pageDefault.total) {
+    //                     $('.page').paging(pageDefault, val);
+    //                     pageDefault.pageCurrent += 1;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // })
+
     // 登录弹窗
     $('.btn-login').click(function() {
-        console.log(123)
         $('#login-box').css('display', 'block');
         $('#mask').css('display', 'block');
     });
@@ -57,7 +86,17 @@ $(function() {
     $('.login-header-right').click(function() {
         $('#login-box').removeClass().addClass('login')
     })
-
+    // 密码隐藏/显示
+    $('.login-password').on('click', '.psw-hide', function() {
+        $(this).removeClass('psw-hide').addClass('psw-on');
+        $(this).html('&#xe608;')
+        $(this).prev().attr('type', 'text');
+    });
+    $('.login-password').on('click','.psw-on', function() {
+        $(this).removeClass('psw-on').addClass('psw-hide');
+        $(this).html('&#xe606;')
+        $(this).prev().attr('type', 'password');
+    });
     // 登录滑块插件
     // $('#slide').slider({
     //     width: 320,
@@ -93,9 +132,16 @@ $(function() {
             $('.footer-links').addClass('footer-links-active')
         }
     })
+    $('.footer-links-nav ul li').click(function() {
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active').siblings().removeClass();
+            console.log($(this).index())
+            $('.footer-links-item ul:nth-child('+($(this).index()+1)+')').css('display', 'block').siblings().css('display', 'none');
+        }
+    })
 
     // 图片流
-    $('.flex-images').flexImages({rowHeight: 240});
-    $(".lazy").lazyload();
+    // $('.flex-images').flexImages({rowHeight: 240});
+    // $(".lazy").lazyload();
 })
 

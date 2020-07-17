@@ -404,7 +404,7 @@
 }
 
 // 子页面banner图
-.banner {
+.secondary-banner {
     height: 90px;
     width: 100%;
     background: url(//js.photophoto.cn/web/v1/imgs/banner_secondary.png) center center no-repeat;
@@ -728,6 +728,7 @@
                 li {
                     float: left;
                     margin-left: 30px;
+                    cursor: pointer;
 
                     &:first-child {
                         margin-left: 0;
@@ -881,28 +882,28 @@
             font-size: 12px;
         }
     }
-    .login-box {
-        .login-header {
-            &-left {
-                font-weight: 700;
-            }
-            &-right {
+    .login-header {
+        &-left {
+            font-weight: 700;
+        }
+        &-right {
+            font-size: 12px;
+            padding-top: 5px;
+            color: #e02e2e;
+            cursor: pointer;
+            .iconfont {
                 font-size: 12px;
-                padding-top: 5px;
-                color: #e02e2e;
-                cursor: pointer;
-                .iconfont {
-                    font-size: 12px;
-                }
-                &:hover {
-                    text-decoration: underline;
-                }
+            }
+            &:hover {
+                text-decoration: underline;
             }
         }
-        .login-divider {
-            margin: 14px 0 20px 0;
-            border-bottom: 1px solid #ebebeb;
-        }
+    }
+    .login-divider {
+        margin: 14px 0 20px 0;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .login-box {
         .login-phone {
             input {
                 height: 38px;
@@ -962,11 +963,15 @@
                 border: 1px solid #e6e6e6;
                 border-radius: 2px;
             }
-            &-icon {
+            .iconfont {
                 position: absolute;
                 top: 8px;
                 right: 10px;
                 color: #999;
+                cursor: pointer;
+                &:hover {
+                    color: #e02e2e;
+                }
             }
         }
     }
@@ -1037,27 +1042,56 @@
             width: 125px;
         }
     }
+    .third-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 38px;
+        a {
+            cursor: pointer;
+            display: inline-block;
+            .iconfont {
+                font-size: 54px;
+                &:hover {
+                    color: #e02e2e;
+                }
+            }
+            .btn-qq {
+                color: #16b5ff;
+            }
+            .btn-wx {
+                color: #00c800;
+            }
+        }
+        &-divider {
+            height: 26px;
+            border-right: 1px solid #ebebeb;
+        }
+    }
+    .qrcode-box {
+
+    }
 }
 .register {
-    .login-box {
+    .login-box,.login-agree,.register-btn,.register-title,.right-register {
         display: block;
-        .login-agree,.register-btn,.register-title {
-            display: block;
-        }
-        .login-title,.login-toRegister,.login-btn {
-            display: none;
-        }
+    }
+    .login-title,.login-btn,.right-login {
+        display: none;
+    }
+    .login-toRegister {
+        display: none;
     }
 }
 .login {
-    .login-box {
+    .login-agree,.register-btn,.register-title,.right-register {
+        display: none;
+    }
+    .login-title,.login-btn,.right-login,.login-box {
         display: block;
-        .login-agree,.register-btn,.register-title {
-            display: none;
-        }
-        .login-title,.login-toRegister,.login-btn {
-            display: block;
-        }
+    }
+    .login-toRegister {
+        display: inline-block;
     }
 }
 

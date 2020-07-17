@@ -110,7 +110,7 @@
 
 .header-fixed .header-content-main .main-search-btn { width: 64px; background: #e02e2e url(//js.photophoto.cn/web/v1/imgs/search.png) center center no-repeat; border-radius: 0 6px 6px 0; cursor: pointer; }
 
-.banner { height: 90px; width: 100%; background: url(//js.photophoto.cn/web/v1/imgs/banner_secondary.png) center center no-repeat; }
+.secondary-banner { height: 90px; width: 100%; background: url(//js.photophoto.cn/web/v1/imgs/banner_secondary.png) center center no-repeat; }
 
 #bread { background-color: #fff; }
 
@@ -222,7 +222,7 @@
 
 .footer-links-nav { display: none; }
 
-.footer-links-nav ul li { float: left; margin-left: 30px; }
+.footer-links-nav ul li { float: left; margin-left: 30px; cursor: pointer; }
 
 .footer-links-nav ul li:first-child { margin-left: 0; }
 
@@ -272,15 +272,15 @@
 
 #login-box .login-box-close .iconfont { font-size: 12px; }
 
-#login-box .login-box .login-header-left { font-weight: 700; }
+#login-box .login-header-left { font-weight: 700; }
 
-#login-box .login-box .login-header-right { font-size: 12px; padding-top: 5px; color: #e02e2e; cursor: pointer; }
+#login-box .login-header-right { font-size: 12px; padding-top: 5px; color: #e02e2e; cursor: pointer; }
 
-#login-box .login-box .login-header-right .iconfont { font-size: 12px; }
+#login-box .login-header-right .iconfont { font-size: 12px; }
 
-#login-box .login-box .login-header-right:hover { text-decoration: underline; }
+#login-box .login-header-right:hover { text-decoration: underline; }
 
-#login-box .login-box .login-divider { margin: 14px 0 20px 0; border-bottom: 1px solid #ebebeb; }
+#login-box .login-divider { margin: 14px 0 20px 0; border-bottom: 1px solid #ebebeb; }
 
 #login-box .login-box .login-phone input { height: 38px; border: 1px solid #e6e6e6; border-radius: 2px; }
 
@@ -304,7 +304,9 @@
 
 #login-box .login-box .login-password #login-password { height: 36px; width: 318px; text-indent: 10px; font-size: 14px; border: 1px solid #e6e6e6; border-radius: 2px; }
 
-#login-box .login-box .login-password-icon { position: absolute; top: 8px; right: 10px; color: #999; }
+#login-box .login-box .login-password .iconfont { position: absolute; top: 8px; right: 10px; color: #999; cursor: pointer; }
+
+#login-box .login-box .login-password .iconfont:hover { color: #e02e2e; }
 
 #login-box .login-agree { margin-top: 10px; }
 
@@ -332,17 +334,31 @@
 
 #login-box .third-text span { color: #666; font-size: 12px; background-color: #fff; position: relative; top: 6px; display: inline-block; width: 125px; }
 
-.register .login-box { display: block; }
+#login-box .third-btn { display: flex; justify-content: space-between; align-items: center; padding: 0 38px; }
 
-.register .login-box .login-agree, .register .login-box .register-btn, .register .login-box .register-title { display: block; }
+#login-box .third-btn a { cursor: pointer; display: inline-block; }
 
-.register .login-box .login-title, .register .login-box .login-toRegister, .register .login-box .login-btn { display: none; }
+#login-box .third-btn a .iconfont { font-size: 54px; }
 
-.login .login-box { display: block; }
+#login-box .third-btn a .iconfont:hover { color: #e02e2e; }
 
-.login .login-box .login-agree, .login .login-box .register-btn, .login .login-box .register-title { display: none; }
+#login-box .third-btn a .btn-qq { color: #16b5ff; }
 
-.login .login-box .login-title, .login .login-box .login-toRegister, .login .login-box .login-btn { display: block; }
+#login-box .third-btn a .btn-wx { color: #00c800; }
+
+#login-box .third-btn-divider { height: 26px; border-right: 1px solid #ebebeb; }
+
+.register .login-box, .register .login-agree, .register .register-btn, .register .register-title, .register .right-register { display: block; }
+
+.register .login-title, .register .login-btn, .register .right-login { display: none; }
+
+.register .login-toRegister { display: none; }
+
+.login .login-agree, .login .register-btn, .login .register-title, .login .right-register { display: none; }
+
+.login .login-title, .login .login-btn, .login .right-login, .login .login-box { display: block; }
+
+.login .login-toRegister { display: inline-block; }
 
 .ui-slider-wrap { background: #e8e8e8; position: relative; }
 

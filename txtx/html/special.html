@@ -16,15 +16,37 @@
 <body>
     <script src="../js/header.js"></script>
     <div class="special-banner contain"></div>
+    <div class="special contain">
+        <div class="special-box">
+            <a href="">
+                <img src="../imgs/preview.png" alt="">
+            </a>
+            <div class="special-tag">
+                卡通人物
+            </div>
+        </div>
+    </div>
+    <!-- 分页器 -->
+    <div id="page" class="page-less clearfix">
+        <div class="page mt40">
+            <div class="page-up btn" data-value="up">上一页</div>
+            <div class="page-list"></div>
+            <div class="page-down btn" data-value="down">下一页</div>
+        </div>
+    </div>
     <script src="../js/footer.js"></script>
     <script>
-        $(function() {
-            $('.special-banner').paging({
-                count: 200,
-                pageCount: 20,
-                pageCurrent: 1
-            })
-        })
+        // $(function() {
+        //     var pageDefault = {
+        //         count: 181,
+        //         pageCount: 20,
+        //         pageCurrent: 2
+        //     }
+        //     pageDefault.total = Math.ceil(pageDefault.count/pageDefault.pageCount);
+        //     console.log(pageDefault.total);
+        //     $('.page').paging(pageDefault);
+        // })
     </script>
+    <script src="../js/paging.main.js"></script>
 </body>
 </html>
