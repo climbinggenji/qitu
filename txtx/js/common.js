@@ -37,36 +37,6 @@ $(function() {
         }
     });
 
-    // 分页器
-    // $('.page').on('click', '.btn', function() {
-    //     var val = $(this).data('value')
-    //     if (typeof val == 'number') {
-    //         pageDefault.pageCurrent = val;
-    //         $('.page').paging(pageDefault, val);
-    //     } else if (typeof val == 'string') {
-    //         if (val == 'go') {
-    //             var pageGo = parseInt($('#page-go').val());
-    //             if (pageGo>0 && pageGo<=pageDefault.total) {
-    //                 pageDefault.pageCurrent = pageGo;
-    //                 console.log(typeof pageGo)
-    //                 $('.page').paging(pageDefault, pageGo);
-    //             }
-    //         } else {
-    //             if (val == 'up') {
-    //                 if (pageDefault.pageCurrent != 1) {
-    //                     $('.page').paging(pageDefault, val);
-    //                     pageDefault.pageCurrent -= 1;
-    //                 }
-    //             } else {
-    //                 if (pageDefault.pageCurrent-1 != pageDefault.total) {
-    //                     $('.page').paging(pageDefault, val);
-    //                     pageDefault.pageCurrent += 1;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // })
-
     // 登录弹窗
     $('.btn-login').click(function() {
         $('#login-box').css('display', 'block');
@@ -135,7 +105,6 @@ $(function() {
     $('.footer-links-nav ul li').click(function() {
         if (!$(this).hasClass('active')) {
             $(this).addClass('active').siblings().removeClass();
-            console.log($(this).index())
             $('.footer-links-item ul:nth-child('+($(this).index()+1)+')').css('display', 'block').siblings().css('display', 'none');
         }
     })

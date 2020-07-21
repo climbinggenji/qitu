@@ -3,7 +3,6 @@
 
         this.each(function () {
             // element-specific code here
-            console.log(settings)
             var current = settings.pageCurrent,
                 count = settings.total;
             if (val) {

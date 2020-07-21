@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/common.min.css">
     <link rel="stylesheet" href="../css/iconfont/iconfont.css">
     <script src="../js/jquery.min.js"></script>
-    <script src="../js/common.js"></script>
 </head>
 <body>
     <script src="../js/header.js"></script>
@@ -86,10 +85,10 @@
     <!-- 次级页面内容 -->
     <div class="secondary-content contain">
         <div class="flex-images mt30">
-            <div class="item" data-w="200" data-h="150">
+            <div class="item" data-w="600" data-h="800">
                 <a href="">
                     <div class="item-img">
-                        <img src="../imgs/preview.png">
+                        <img src="../imgs/ex1.png">
                     </div>
                 </a>
                 <a href="" class="preview-mask"></a>
@@ -104,9 +103,9 @@
                     <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div>
             </div>
-            <div class="item" data-w="250" data-h="150"><a href="">
+            <div class="item" data-w="290" data-h="400"><a href="">
                     <div class="item-img">
-                        <img src="../imgs/preview.png">
+                        <img src="../imgs/ex2.png">
                     </div>
                 </a>
                 <a href="" class="preview-mask"></a>
@@ -120,9 +119,9 @@
                     </div>
                     <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div></div>
-            <div class="item" data-w="150" data-h="150"><a href="">
+            <div class="item" data-w="374" data-h="246"><a href="">
                     <div class="item-img">
-                        <img src="../imgs/preview.png">
+                        <img src="../imgs/ex3.png">
                     </div>
                 </a>
                 <a href="" class="preview-mask"></a>
@@ -136,9 +135,9 @@
                     </div>
                     <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
                 </div></div>
-            <div class="item" data-w="150" data-h="150"><a href="">
+            <div class="item" data-w="374" data-h="246"><a href="">
                     <div class="item-img">
-                        <img src="../imgs/preview.png">
+                        <img src="../imgs/ex4.png">
                     </div>
                 </a>
                 <a href="" class="preview-mask"></a>
@@ -378,16 +377,19 @@
     <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
     <script>
         $(function() {
+            // 分页器
             var pageDefault = {
                 count: 181,
                 pageCount: 20,
                 pageCurrent: 2
             }
             pageDefault.total = Math.ceil(pageDefault.count/pageDefault.pageCount);
-            console.log(pageDefault.total);
             $('.page').paging(pageDefault);
+            $('.flex-images').flexImages({rowHeight: 400,truncate: true});
+            $(".lazy").lazyload();
         })
     </script>
-    
+    <script src="../js/common.js"></script>
+    <script src="../js/plugins/paging.main.js"></script>
 </body>
 </html>
