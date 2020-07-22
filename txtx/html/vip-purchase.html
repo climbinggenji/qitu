@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图行天下</title>
+    <link rel="stylesheet" href="../css/txtx.css">
+    <link rel="stylesheet" href="../css/common.min.css">
+    <link rel="stylesheet" href="../css/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css//vip-purchase.min.css">
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/common.js"></script>
+</head>
+
+<body>
+    <!-- 顶部导航 -->
+    <div id='header' class='header'>
+        <div class='header-content contain clearfix'>
+            <div class='header-content-logo fl'>
+                <a href='../index.html' style='background: url(//js.photophoto.cn/web/v1/imgs/logo.png ) 100%
+                    no-repeat;'></a>
+            </div>
+            <div class='header-content-user fr'>
+                <a href='/' class='vip-box mr15'>
+                    个人VIP
+                </a>
+                <div class='btn-login fr mt18 font14'>
+                    登录
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 登录注册 -->
+    <div id='login-box' class='login'>
+        <div class='login-box-close'>
+            <i class='iconfont'>&#xe607;</i>
+        </div>
+        <div class='login-box'>
+            <div class='login-header clearfix'>
+                <div class='login-header-left fl'>
+                    <span class='login-title'>手机登录</span>
+                    <span class='register-title'>短信注册</span>
+                </div>
+                <div class='login-header-right fr'>直接登录 <i class='iconfont'>&#xe600;</i></div>
+            </div>
+            <div class='login-divider'></div>
+            <div class='login-phone clearfix'>
+                <div class='login-phone-code fl'>
+                    <input id='login-phone-code' type='text'>
+                    <div class='code-select-icon'><i class='iconfont'>&#xe690;</i></div>
+                </div>
+                <div class='login-phone-number fl'>
+                    <input id='login-phone-number' type='number' placeholder='输入手机号'>
+                </div>
+            </div>
+            <div id='slide' class='slide mt20'></div>
+            <div class='login-verify clearfix mt20'>
+                <input id='login-verify-code' type='text' placeholder='输入验证码'>
+                <div class='login-verify-btn btn'>发送验证码</div>
+            </div>
+            <div class='login-password mt20'>
+                <input id='login-password' type='text' placeholder='输入密码'>
+                <div class='login-password-icon'>
+                    <i class='iconfont'>&#xe608;</i>
+                </div>
+            </div>
+            <div class='login-agree'>
+                <div class='login-agree-radio'>
+                    <input id='agreement' name='agreement' type='checkbox' hidden>
+                    <label for='agreement' class='agree-radio'></label>
+                    已阅读并同意<a href=''>《用户协议》</a>
+                </div>
+            </div>
+            <div class='login-toRegister'>没有账号？</div>
+            <div class='register-btn btn'>立即注册</div>
+            <div class='login-btn btn'>登录</div>
+            <div class='third-text'><span>第三方账号登录</span></div>
+        </div>
+        <div class='qrcode-box'></div>
+    </div>
+    <div id='mask'></div>
+    <!-- 支付content -->
+    <div class="purchase">
+        <div class="purchase-tab clearfix">
+            <div class="purchase-tab-option active">
+                <div class="option">
+                    基础VIP <div class="vip-icon-box"><span class="vip-icon vip-icon-vip"></span></div>
+                    <div class="bb"></div>
+                </div>
+            </div>
+            <div class="purchase-tab-option">
+                <div class="option">
+                    超级VIP <div class="vip-icon-box"><span class="vip-icon vip-icon-svip"></span></div>
+                    <div class="bb"></div>
+                </div>
+            </div>
+        </div>
+        <div class="purchase-type">
+            <div class="purchase-type-box purchase-vip">
+                <div class="clearfix">
+                    <div class="purchase-item">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>15</span> 元</span> <span class="text">25元</span>
+                            <div class="desc-main"></div>
+                        </div>
+                        <div class="purchase-item-time mt10">1个月</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>39</span> 元</span> <span class="text">75元</span>
+                            <div class="desc-main">低至0.43元一天</div>
+                        </div>
+                        <div class="purchase-item-time mt10">3个月</div>
+                        <div class="tag-text">买二送一</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                    <div class="purchase-item active">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>99</span> 元</span> <span class="text">159元</span>
+                            <div class="desc-main">低至0.28元一天</div>
+                        </div>
+                        <div class="purchase-item-time mt10">12个月</div>
+                        <div class="tag-text">性价比首选</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>169</span> 元</span> <span class="text">399元</span>
+                            <div class="desc-main">全站素材海量下载</div>
+                        </div>
+                        <div class="purchase-item-time mt10">终身</div>
+                        <div class="tag-text">限时7.26-8.12</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                </div>
+                <h2>支付方式</h2>
+                <div class="purchase-main">
+                    <a href="">
+                        <p class="mention">支付即同意《VIP会员服务协议》</p>
+                    </a>
+                    <p>应付金额： <span>99</span> 元</p>
+                    <div class="code clearfix">
+                        <div class="code-box code-wx fl">
+                            <div class="code-box-qrcode">
+                                <img src="../imgs/preview.png">
+                            </div>
+                            <div class="code-box-title mt10">
+                                <i class="iconfont">&#xe626;</i> 使用微信扫码支付
+                            </div>
+                        </div>
+                        <div class="code-box code-zfb fr">
+                            <div class="code-box-qrcode">
+                                <img src="../imgs/preview.png">
+                            </div>
+                            <div class="code-box-title mt10">
+                                <i class="iconfont">&#xe627;</i> 使用支付宝扫码支付
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-type-box purchase-svip" style="display: none;">
+                <div class="clearfix">
+                    <div class="purchase-item">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>15</span> 元</span> <span class="text">25元</span>
+                            <div class="desc-main"></div>
+                        </div>
+                        <div class="purchase-item-time mt10">1个月</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>39</span> 元</span> <span class="text">75元</span>
+                            <div class="desc-main">低至0.43元一天</div>
+                        </div>
+                        <div class="purchase-item-time mt10">3个月</div>
+                        <div class="tag-text">买二送一</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                    <div class="purchase-item active">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>99</span> 元</span> <span class="text">159元</span>
+                            <div class="desc-main">低至0.28元一天</div>
+                        </div>
+                        <div class="purchase-item-time mt10">12个月</div>
+                        <div class="tag-text">性价比首选</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                    <div class="purchase-item">
+                        <div class="purchase-item-main">
+                            <span class="text-main"><span>169</span> 元</span> <span class="text">399元</span>
+                            <div class="desc-main">全站素材海量下载</div>
+                        </div>
+                        <div class="purchase-item-time mt10">终身</div>
+                        <div class="tag-text">限时7.26-8.12</div>
+                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
+                    </div>
+                </div>
+                <h2>支付方式</h2>
+                <div class="purchase-main">
+                    <a href="">
+                        <p class="mention">支付即同意《VIP会员服务协议》</p>
+                    </a>
+                    <p>应付金额： <span>99</span> 元</p>
+                    <div class="code clearfix">
+                        <div class="code-box code-wx fl">
+                            <div class="code-box-qrcode">
+                                <img src="../imgs/preview.png">
+                            </div>
+                            <div class="code-box-title mt10">
+                                <i class="iconfont">&#xe626;</i> 使用微信扫码支付
+                            </div>
+                        </div>
+                        <div class="code-box code-zfb fr">
+                            <div class="code-box-qrcode">
+                                <img src="../imgs/preview.png">
+                            </div>
+                            <div class="code-box-title mt10">
+                                <i class="iconfont">&#xe627;</i> 使用支付宝扫码支付
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="notice">
+            <p>温馨提示</p>
+            <p>1、促销价格的商品暂不支持退款服务</p>
+            <p>2、请合理使用下载帐号，若短时间内高频或大量非法下载可能会被系统封禁</p>
+            <p>3、下载速度与用户自身网速相关</p>
+            <p>4、更多问题请咨询在线客服</p>
+        </div>
+    </div>
+    <script src="../js/footer.js"></script>
+    <script src="../js/vip-purchase.js"></script>
+</body>
+
+</html>
