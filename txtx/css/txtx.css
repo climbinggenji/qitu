@@ -634,6 +634,18 @@ ul {
     text-align: center;
     background-color: #fff
 }
+.logo-vip-small {
+    background-position: 0 -72px;
+}
+.logo-svip-large {
+    background-position: -51px 0;
+}
+.logo-svip-small {
+    background-position: -51px -72px;
+}
+.logo-free-large {
+    background-position: -102px 0;
+}
 
 article,
 aside,

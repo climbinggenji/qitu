@@ -9,44 +9,94 @@
     <link rel="stylesheet" href="../css/user.min.css">
     <link rel="stylesheet" href="../css/special.min.css">
     <link rel="stylesheet" href="../css/iconfont/iconfont.css">
-    <script src="./../js/jquery.min.js"></script>
-    <script src="./../js/common.js"></script>
-    <script src="./../js/plugins/paging.js"></script>
 </head>
 <body>
     <script src="../js/header.js"></script>
     <div class="special-banner contain"></div>
-    <div class="special contain">
-        <div class="special-box">
-            <a href="">
-                <img src="../imgs/preview.png" alt="">
-            </a>
-            <div class="special-tag">
-                卡通人物
+    <div class="special contain clearfix">
+        <a href="special-detail.html">
+            <div class="special-box">
+                <div class="special-box-img">
+                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/special.png">
+                </div>
+                <div class="special-box-text">
+                    卡通人物
+                    <div class="special-box-tag"><i class="iconfont">&#xe62c;</i> 共65张</div>
+                </div>
             </div>
-        </div>
+        </a>
+        <a href="special-detail.html">
+            <div class="special-box">
+                <div class="special-box-img">
+                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/special.png">
+                </div>
+                <div class="special-box-text">
+                    卡通人物
+                    <div class="special-box-tag"><i class="iconfont">&#xe62c;</i> 共65张</div>
+                </div>
+            </div>
+        </a>
+        <a href="special-detail.html">
+            <div class="special-box">
+                <div class="special-box-img">
+                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/special.png">
+                </div>
+                <div class="special-box-text">
+                    卡通人物
+                    <div class="special-box-tag"><i class="iconfont">&#xe62c;</i> 共65张</div>
+                </div>
+            </div>
+        </a>
+        <a href="special-detail.html">
+            <div class="special-box">
+                <div class="special-box-img">
+                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/special.png">
+                </div>
+                <div class="special-box-text">
+                    卡通人物
+                    <div class="special-box-tag"><i class="iconfont">&#xe62c;</i> 共65张</div>
+                </div>
+            </div>
+        </a>
+        <a href="special-detail.html">
+            <div class="special-box">
+                <div class="special-box-img">
+                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/special.png">
+                </div>
+                <div class="special-box-text">
+                    卡通人物
+                    <div class="special-box-tag"><i class="iconfont">&#xe62c;</i> 共65张</div>
+                </div>
+            </div>
+        </a>
+        <a href="special-detail.html">
+            <div class="special-box">
+                <div class="special-box-img">
+                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/special.png">
+                </div>
+                <div class="special-box-text">
+                    卡通人物
+                    <div class="special-box-tag"><i class="iconfont">&#xe62c;</i> 共65张</div>
+                </div>
+            </div>
+        </a>
     </div>
     <!-- 分页器 -->
     <div id="page" class="page-less clearfix">
-        <div class="page mt40">
+        <div class="page">
             <div class="page-up btn" data-value="up">上一页</div>
             <div class="page-list"></div>
             <div class="page-down btn" data-value="down">下一页</div>
         </div>
     </div>
     <script src="../js/footer.js"></script>
-    <script>
-        // $(function() {
-        //     var pageDefault = {
-        //         count: 181,
-        //         pageCount: 20,
-        //         pageCurrent: 2
-        //     }
-        //     pageDefault.total = Math.ceil(pageDefault.count/pageDefault.pageCount);
-        //     console.log(pageDefault.total);
-        //     $('.page').paging(pageDefault);
-        // })
-    </script>
+    <script src="./../js/jquery.min.js"></script>
+    <script src="./../js/common.js"></script>
+    <script src="./../js/plugins/paging.js"></script>
     <script src="../js/paging.main.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
+    <script>
+        $('.lazy').lazyload();
+    </script>
 </body>
 </html>
