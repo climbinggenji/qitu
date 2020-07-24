@@ -126,7 +126,7 @@
 
 .download-content { margin-top: 30px; }
 
-.download-content-image { background-color: #fff; padding: 15px 30px; width: 780px; position: relative; }
+.download-content-image { background-color: #fff; padding: 15px 30px; width: 780px; position: relative; border-radius: 4px; box-shadow: 0px 2px 10px 0px rgba(31, 31, 31, 0.1); }
 
 .download-content-image .report { position: absolute; top: 20px; right: 60px; font-size: 12px; color: #999; }
 
@@ -160,13 +160,102 @@
 
 .download-content .download-right-btn .collect-btn { width: 158px; background: linear-gradient(45deg, #ff8330 0%, #e25656 0%, #ff8533 0%, #ff6600 100%); }
 
-.download-content .download-right-main { background-color: #fff; padding: 20px 30px; }
+.download-content .download-right-main { background-color: #fff; padding: 20px 30px; box-shadow: 0px 2px 10px 0px rgba(31, 31, 31, 0.1); border-radius: 4px; }
 
-.download-content .download-right-main .right-item { position: relative; }
+.download-content .download-right-main .right-item { position: relative; margin-bottom: 20px; }
 
 .download-content .download-right-main .right-item .label { display: inline-block; width: 65px; font-size: 14px; color: #999; text-align: justify; text-justify: distribute-all-lines; /*ie6-8*/ text-align-last: justify; /* ie9*/ -moz-text-align-last: justify; /*ff*/ -webkit-text-align-last: justify; /*chrome 20+*/ }
 
 .download-content .download-right-main .right-item .text { position: absolute; right: 0; top: 2px; font-size: 14px; color: #666; }
+
+.download-content .download-right-main .right-item .text .iconfont { color: #666; font-size: 24px; margin: 0 7px; }
+
+.download-content .download-right-main .right-item .text .iconfont:hover { color: #e02e2e; }
+
+.download-content .download-right-main .right-divider { margin-bottom: 20px; border-bottom: 1px solid #e6e6e6; }
+
+.download-content .download-right-main .title { padding-top: 20px; }
+
+.download-content .download-right-main .title .label { color: #666; }
+
+.download-content .download-right-main .tag-box .tag-item { border: 1px solid #ebebeb; border-radius: 15px; float: left; letter-spacing: 1px; padding: 5px 20px; color: #666; font-size: 14px; margin: 10px 20px 0 0; }
+
+.download-content .download-right-main .tag-box .tag-item:hover { border: 1px solid #e02e2e; color: #e02e2e; }
+
+@media screen and (max-width: 1280px) { .download .download-content-image { width: 600px; }
+  .download .download-right { width: 318px; }
+  .download .download-right .download-btn { width: 170px; }
+  .download .download-right .collect-btn { width: 128px; } }
+
+.recommend-title { font-size: 18px; letter-spacing: 2px; }
+
+.xiazai-content { background: #ffffff; border-radius: 4px; box-shadow: 0px 2px 10px 0px rgba(31, 31, 31, 0.1); overflow: hidden; margin-top: 30px; }
+
+.xiazai-content-banner { height: 60px; background: url(../imgs/xiazai-banner.png) center center no-repeat; }
+
+.xiazai-content-main { padding: 35px 0 55px 225px; position: relative; }
+
+.xiazai-content-main .image { width: 158px; height: 230px; padding: 18px 25px; background-image: linear-gradient(to bottom, #eaf4ff 0%, #b5d9e7 100%); }
+
+.xiazai-content-main .image img { width: 100%; height: 100%; box-shadow: 4px 10px 16px 1px rgba(0, 0, 0, 0.28); }
+
+.xiazai-content-main .info { margin-left: 50px; }
+
+.xiazai-content-main .info h4 { font-size: 16px; font-weight: 400; }
+
+.xiazai-content-main .info p { margin-top: 20px; font-size: 14px; color: #999; }
+
+.xiazai-content-main .info .button { margin-top: 30px; width: 198px; height: 52px; line-height: 52px; text-align: center; display: inline-block; font-size: 18px; border-radius: 4px; overflow: hidden; cursor: pointer; }
+
+.xiazai-content-main .info .button .iconfont { font-size: 20px; }
+
+.xiazai-content-main .info .button-vip { opacity: 0.92; background: linear-gradient(#e25656 0%, #e02e2e 100%); color: #fff; border: 1px solid #e25656; }
+
+.xiazai-content-main .info .button-free { opacity: 0.92; color: #999; border: 1px solid #e6e6e6; margin-left: 30px; }
+
+.xiazai-content-main .report { position: absolute; font-size: 12px; color: #999; right: 15px; top: 15px; cursor: pointer; }
+
+.xiazai-content-main .report:hover { color: #e02e2e; }
+
+.vip-download-banner { height: 100px; background: url(../imgs/vip-download1920.png) center center no-repeat; }
+
+#report-box { width: 320px; height: 342px; padding: 40px; background-color: #fff; position: fixed; top: 50%; left: 50%; margin-left: -200px; margin-top: -211px; z-index: 1002; display: none; }
+
+#report-box .report-head { font-weight: 700; padding-bottom: 14px; border-bottom: 1px solid #ebebeb; }
+
+#report-box .report-head-tag { font-size: 12px; font-weight: 400; color: #999; }
+
+#report-box .report-head-tag span { font-size: 16px; color: #FF0000; font-weight: 700; }
+
+#report-box .report-type { margin-top: 20px; border-radius: 2px; position: relative; }
+
+#report-box .report-type input { cursor: pointer; border: 1px solid #e6e6e6; font-size: 14px; color: #999; line-height: 36px; text-indent: 10px; width: 100%; background-color: #fff; }
+
+#report-box .report-type .iconfont { position: absolute; right: 20px; line-height: 38px; top: 0; color: #666; font-size: 10px; }
+
+#report-box .report-type span { font-size: 16px; position: absolute; line-height: 38px; left: -15px; top: 2px; color: #FF0000; font-weight: 700; }
+
+#report-box .report-type:hover input { border: 1px solid #e02e2e; }
+
+#report-box .report-desc { position: relative; margin-top: 20px; }
+
+#report-box .report-desc textarea { border: 1px solid #e6e6e6; font-size: 14px; color: #999; padding: 10px; width: 298px; background-color: #fff; height: 65px; resize: none; line-height: 24px; }
+
+#report-box .report-desc span { font-size: 16px; position: absolute; line-height: 38px; left: -15px; top: 2px; color: #FF0000; font-weight: 700; }
+
+#report-box .report-phone { margin-top: 20px; border: 1px solid #e6e6e6; font-size: 14px; color: #999; line-height: 36px; text-indent: 10px; width: 100%; background-color: #fff; }
+
+#report-box .report-btn-box { padding-left: 30px; }
+
+#report-box .report-btn-box .report-btn { margin-top: 40px; width: 112px; height: 36px; line-height: 36px; text-align: center; letter-spacing: 2px; border-radius: 2px; display: inline-block; cursor: pointer; }
+
+#report-box .report-btn-box .report-btn-cancel { background: #ffffff; border: 1px solid #e6e6e6; }
+
+#report-box .report-btn-box .report-btn-cancel:hover { color: #e02e2e; border: 1px solid #e02e2e; }
+
+#report-box .report-btn-box .report-btn-submit { margin-left: 30px; color: #fff; background: #e02e2e; border: 1px solid #e02e2e; }
+
+#report-box .report-btn-box .report-btn-submit:hover { background-color: #fff; color: #e02e2e; }
 
 #menu { background-color: #fff; }
 
@@ -280,11 +369,11 @@
 
 .footer-links-item ul li:first-child { margin-left: 0; }
 
-.footer .copyright-space { height: 90px; }
+.footer .copyright-space { height: 80px; }
 
 .footer .copyright { position: absolute; bottom: 10px; right: 0; left: 0; margin: auto; }
 
-.footer .copyright p { text-align: center; line-height: 20px; }
+.footer .copyright p { text-align: center; line-height: 24px; }
 
 .footer-links-active .footer-links-title .arrow-icon { background: url(//js.photophoto.cn/web/v1/imgs/arrow_up.png) center center no-repeat; }
 
@@ -438,6 +527,8 @@
 
 .preview-index .preview-box .preview-mask { opacity: 0; visibility: hidden; width: 100%; height: 100%; background-color: #262626; position: absolute; top: 0; left: 0; }
 
+.preview-index .preview-box .banquan { width: 34px; height: 34px; position: absolute; top: 0; left: 0; background: url(//js.photophoto.cn/web/v1/imgs/-e-banquan.png) center center no-repeat; }
+
 .preview-index .preview-box:hover .preview-mask { opacity: .3; visibility: visible; }
 
 .preview-index .preview-box:hover .preview-main { opacity: 1; visibility: visible; }
@@ -512,4 +603,10 @@
 .flex-images .item:hover .preview-main-title { width: 100%; text-align: center; bottom: 42px; }
 
 .flex-images .item:hover .preview-main-title a { color: #fff; font-size: 14px; }
+
+.divider-e5 { border-bottom: 1px solid #e5e5e5; }
+
+.divider-d8 { border-bottom: 1px solid #d8d8d8; }
+
+.divider-vertical-e6 { border-right: 1px solid #e6e6e6; }
 /*# sourceMappingURL=common.min.css.map */

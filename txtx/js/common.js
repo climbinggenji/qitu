@@ -46,9 +46,11 @@ $(function() {
         $('#login-box').css('display', 'none');
         $('#mask').css('display', 'none');
     });
+    // 遮罩层
     $('#mask').click(function() {
         $('#login-box').css('display', 'none');
         $('#mask').css('display', 'none');
+        $('#report-box').hide();
     });
     $('.login-toRegister').click(function() {
         $('#login-box').removeClass().addClass('register')
@@ -109,8 +111,14 @@ $(function() {
         }
     })
 
-    // 图片流
-    // $('.flex-images').flexImages({rowHeight: 240});
-    // $(".lazy").lazyload();
+    // 素材举报report
+    $('.report').on('click', function() {
+        $('#report-box').show();
+        $('#mask').show();
+    })
+    $('.report-btn-cancel').on('click', function() {
+        $('#report-box').hide();
+        $('#mask').hide();
+    })
 })
 

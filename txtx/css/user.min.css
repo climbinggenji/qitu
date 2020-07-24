@@ -20,21 +20,31 @@
 
 .user .main-content .main-title span { font-size: 18px; font-family: Microsoft YaHei Bold, Microsoft YaHei Bold-Bold; font-weight: 700; position: relative; left: 4px; bottom: -7px; }
 
-.user .main-content .user-content .user-info img { height: 100px; width: 100px; border-radius: 50%; }
+.user .main-content .user-content .user-info .touxiang { float: left; height: 100px; width: 100px; border-radius: 50%; overflow: hidden; position: relative; cursor: pointer; }
+
+.user .main-content .user-content .user-info .touxiang img { height: 100%; width: 100%; }
+
+.user .main-content .user-content .user-info .touxiang-mask { position: absolute; width: 100%; height: 100%; opacity: 0.66; background: #000000; z-index: 10; top: 0; display: none; font-size: 12px; color: #fff; line-height: 100px; text-align: center; letter-spacing: 2px; }
+
+.user .main-content .user-content .user-info .touxiang:hover .touxiang-mask { display: block; }
 
 .user .main-content .user-content .user-info-box .user-name { line-height: 30px; font-weight: 700; color: #222; font-size: 20px; }
 
+.user .main-content .user-content .user-info-box .user-name .iconfont { color: #e02e2e; }
+
 .user .main-content .user-content .user-info-box .user-id { line-height: 40px; color: #999; font-size: 14px; }
+
+.user .main-content .user-content .user-info-box .user-score { font-size: 14px; }
+
+.user .main-content .user-content .user-info-box .user-score span { color: #e02e2e; }
 
 .user .main-content .user-content .user-info-box .user-wallet { line-height: 27px; font-size: 14px; }
 
 .user .main-content .user-content .user-info-box .user-wallet span { font-size: 20px; color: #ff6600; font-weight: 700; }
 
-.user .main-content .user-content .user-info-tixian { width: 80px; height: 100px; position: relative; }
+.user .main-content .user-content .user-info-box .user-wallet button { width: 80px; border: 1px solid #e6e6e6; border-radius: 4px; background-color: #fff; font-size: 14px; height: 30px; cursor: pointer; position: relative; top: -3px; margin-left: 20px; }
 
-.user .main-content .user-content .user-info-tixian button { width: 100%; border: 1px solid #e6e6e6; border-radius: 4px; background-color: #fff; font-size: 14px; height: 30px; position: absolute; bottom: 0; cursor: pointer; }
-
-.user .main-content .user-content .user-info-tixian button:hover { border: 1px solid #e02e2e; color: #e02e2e; }
+.user .main-content .user-content .user-info-box .user-wallet button:hover { border: 1px solid #e02e2e; color: #e02e2e; }
 
 .user .main-content .user-content .user-info .vip-box { padding-top: 30px; position: relative; }
 
@@ -78,13 +88,29 @@
 
 .user .main-content .user-content .user-security-items .security-item-info .security-title { font-weight: 700; color: #222; letter-spacing: 1px; }
 
-.user .main-content .user-content .user-security-items .security-item-info .security-desc { color: #808080; letter-spacing: 1px; }
+.user .main-content .user-content .user-security-items .security-item-info .security-desc { margin-top: 5px; color: #808080; letter-spacing: 1px; }
 
 .user .main-content .user-content .user-security-items .security-item-btn { float: right; width: 78px; height: 28px; line-height: 28px; font-size: 12px; text-align: center; border: 1px solid #e6e6e6; border-radius: 4px; background-color: #fff; cursor: pointer; }
 
 .user .main-content .user-content .user-security-items .security-item-btn:hover { border: 1px solid #e02e2e; color: #e02e2e; }
 
 .user .main-content .user-content .user-security-items .active .iconfont { color: #e02e2e; }
+
+.user .main-content .user-content .user-third-title { color: #222; font-weight: 700; margin-top: 40px; }
+
+.user .main-content .user-content .user-third .security-item { width: 440px; margin-top: 30px; }
+
+.user .main-content .user-content .user-third .security-item .iconfont { color: #999; font-size: 30px; float: left; }
+
+.user .main-content .user-content .user-third .security-item-info { float: left; font-size: 12px; margin-left: 10px; }
+
+.user .main-content .user-content .user-third .security-item-info .security-title { color: #222; letter-spacing: 1px; }
+
+.user .main-content .user-content .user-third .security-item-info .security-desc { margin-top: 5px; color: #808080; letter-spacing: 1px; }
+
+.user .main-content .user-content .user-third .security-item-btn { float: right; width: 78px; height: 28px; line-height: 28px; font-size: 12px; text-align: center; border: 1px solid #e6e6e6; border-radius: 4px; background-color: #fff; cursor: pointer; }
+
+.user .main-content .user-content .user-third .security-item-btn:hover { border: 1px solid #e02e2e; color: #e02e2e; }
 
 .user .main-content .provide-sign .step { width: 810px; margin: 0 auto; }
 
@@ -115,6 +141,38 @@
 .user .main-content .provide-sign .provide-verify p { text-align: center; font-size: 14px; margin-top: 10px; color: #999; margin-bottom: 190px; }
 
 .user .main-content .provide-sign .provide-verify .title { color: #333; font-size: 24px; font-weight: 700; margin: 0; }
+
+.user .main-content .information form { padding-left: 80px; }
+
+.user .main-content .information form .form-item { margin-bottom: 30px; }
+
+.user .main-content .information form .form-item .label { width: 80px; float: left; font-size: 14px; color: #999; line-height: 40px; }
+
+.user .main-content .information form .form-item .touxiang { float: left; height: 100px; width: 100px; border-radius: 50%; overflow: hidden; position: relative; cursor: pointer; }
+
+.user .main-content .information form .form-item .touxiang img { height: 100%; width: 100%; }
+
+.user .main-content .information form .form-item .touxiang-mask { position: absolute; width: 100%; height: 100%; opacity: 0.66; background: #000000; z-index: 10; top: 0; display: none; font-size: 12px; color: #fff; line-height: 100px; text-align: center; letter-spacing: 2px; }
+
+.user .main-content .information form .form-item .touxiang:hover .touxiang-mask { display: block; }
+
+.user .main-content .information form .form-item input[type="text"] { height: 38px; line-height: 38px; text-indent: 10px; background: #ffffff; border: 1px solid #e6e6e6; border-radius: 4px; font-size: 14px; width: 365px; }
+
+.user .main-content .information form .form-item .radio-box { line-height: 40px; font-size: 14px; position: relative; }
+
+.user .main-content .information form .form-item .radio-box input[type="radio"] { position: absolute; opacity: 0; }
+
+.user .main-content .information form .form-item .radio-box input[type="radio"] + label::before { content: ''; display: inline-block; width: 16px; height: 16px; border-radius: 50%; border: 1px solid #e5e5e5; position: relative; top: 4px; margin-left: 5px; }
+
+.user .main-content .information form .form-item .radio-box input[type="radio"]:checked + label::before { background-clip: content-box; background-image: linear-gradient(#be0101 0%, #f53341 100%); width: 10px; height: 10px; padding: 3px; }
+
+.user .main-content .information form .form-item .form-text { line-height: 40px; font-size: 14px; }
+
+.user .main-content .information form .form-item .form-text span { margin-right: 15px; }
+
+.user .main-content .information form .form-item .form-text a { color: #3a95fc; }
+
+.user .main-content .information form .form-item .form-text a:hover { text-decoration: underline; }
 
 .step { position: relative; }
 
