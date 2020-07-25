@@ -15,6 +15,17 @@
                 text-indent: 44px;
                 color: #807D7D;
                 cursor: pointer;
+                .arrow {
+                    display: inline-block;
+                    height: 10px;
+                    width: 14px;
+                }
+                .arrow-up {
+                    background: url(//js.photophoto.cn/web/v1/imgs/arrow_up.png) center center no-repeat;
+                }
+                .arrow-down {
+                    background: url(//js.photophoto.cn/web/v1/imgs/arrow_down.png) center center no-repeat;
+                }
 
                 &:hover {
                     color: #e02e2e;

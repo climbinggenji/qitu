@@ -1,17 +1,17 @@
-// 菜单栏切换
-$('.user-menu>ul>li').on('click', function() {
-    if (!$(this).hasClass('active')) {
-        if ($(this).index() == 3) {
-            $('.provide-menu-list').toggle();
-        }
+// 菜单栏下拉收起
+$('.handle-provide-list').on('click', function() {
+    $('.provide-menu-list').toggle();
+    if ($(this).find('.arrow').hasClass('arrow-down')) {
+        $(this).find('.arrow').removeClass('arrow-down').addClass('arrow-up');
+    } else {
+        $(this).find('.arrow').removeClass('arrow-up').addClass('arrow-down');
     }
 })
-
-// $('.provide-menu-list>li').on('click', function() {
-//     if (!$(this).hasClass('active')) {
-//         $('.user-menu>ul>li').removeClass('active');
-//         $(this).addClass('active').siblings().removeClass('active');
-//         $('.provide-content').show().siblings().hide();
-//         $('.provide-content>div:eq('+ $(this).index() + ')').show().siblings().hide();
-//     }
-// })
+$('.handle-zijin-list').on('click', function() {
+    $('.zijin-list').toggle();
+    if ($(this).find('.arrow').hasClass('arrow-down')) {
+        $(this).find('.arrow').removeClass('arrow-down').addClass('arrow-up');
+    } else {
+        $(this).find('.arrow').removeClass('arrow-up').addClass('arrow-down');
+    }
+})

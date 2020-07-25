@@ -140,11 +140,11 @@
     <div class="user clearfix">
         <div class="user-menu fl">
             <ul>
-                <li class="active"><i class="iconfont">&#xe611;</i> <span>个人中心</span></li>
-                <li><i class="iconfont">&#xe61b;</i> <a href="wdxz.html"><span>我的下载</span></a></li>
-                <li><i class="iconfont">&#xe619;</i> <a href="wdsc.html"><span>我的收藏</span></a></li>
-                <li>
-                    <i class="iconfont">&#xe621;</i> <span>我要供图</span>
+                <a><li class="active"><i class="iconfont">&#xe611;</i> <span>个人中心</span></li></a>
+                <a href="wodexiazai.html"><li><i class="iconfont">&#xe61b;</i> <span>我的下载</span></li></a>
+                <a href="wodeshoucang.html"><li><i class="iconfont">&#xe619;</i> <span>我的收藏</span></li></a>
+                <li class="handle-provide-list">
+                    <i class="iconfont">&#xe621;</i> <span>我要供图 </span><div class="arrow arrow-down"></div>
                 </li>
                 <ul class="provide-menu-list" style="display: none;">
                     <a href="wygt/shenqingqianyue/shenqingqianyue-1.html">
@@ -155,10 +155,21 @@
                     <li>作品规范</li>
                     <li>收益统计</li>
                 </ul>
-                <li><i class="iconfont">&#xe622;</i> <span>资金管理</span></li>
-                <li><i class="iconfont">&#xe612;</i> <span>基本资料</span></li>
-                <li><i class="iconfont">&#xe61a;</i> <span>站内信</span></li>
-                <li><i class="iconfont">&#xe61c;</i> <span>邀请有礼</span></li>
+                <li class="handle-zijin-list"><i class="iconfont">&#xe622;</i> <span>资金管理 </span><div class="arrow arrow-down"></div></li>
+                <ul class="zijin-list" style="display: none;">
+                    <a href="zijinguanli/zhanghubind.html">
+                        <li>账户绑定</li>
+                    </a>
+                    <a href="zijinguanli/shujutongji">
+                        <li>数据统计</li>
+                    </a>
+                    <a href="zijinguanli/tixian">
+                        <li>提现</li>
+                    </a>
+                </ul>
+                <a href="jibenziliao.html"><li><i class="iconfont">&#xe612;</i> <span>基本资料</span></li></a>
+                <a href="message.html"><li><i class="iconfont">&#xe61a;</i> <span>站内信</span></li></a>
+                <a href="invite.html"><li><i class="iconfont">&#xe61c;</i> <span>邀请有礼</span></li></a>
             </ul>
         </div>
         <div class="main-content fl">
@@ -279,6 +290,7 @@
         </div>
     </div>
     <script src="../../js/footer.js"></script>
+    <script src="../../js/user.js"></script>
 </body>
 
 </html>

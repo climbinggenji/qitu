@@ -87,4 +87,18 @@
 .purchase .notice p { color: #999; font-size: 14px; line-height: 20px; }
 
 .purchase .notice p:first-child { margin-bottom: 10px; }
+
+.purchase .success { width: 420px; height: 290px; background: #ffffff; border-radius: 4px; position: fixed; top: 50%; left: 50%; margin-left: -210px; margin-top: -145px; text-align: center; z-index: 1002; }
+
+.purchase .success .iconfont { position: absolute; color: #cbcbcb; right: 12px; top: 12px; font-size: 10px; cursor: pointer; }
+
+.purchase .success-head { text-align: left; font-size: 14px; line-height: 40px; border-bottom: 1px solid #edeff5; text-indent: 20px; }
+
+.purchase .success img { width: 112px; height: 136px; margin-top: 12px; }
+
+.purchase .success h4 { margin-top: 15px; font-weight: 700; }
+
+.purchase .success p { font-size: 14px; color: #999999; margin-top: 15px; }
+
+.purchase .success p span { color: #E02E2E; }
 /*# sourceMappingURL=vip-purchase.min.css.map */
