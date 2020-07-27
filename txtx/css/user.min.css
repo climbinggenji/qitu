@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .user { letter-spacing: 1px; width: 1258px; margin: 30px auto; }
 
 .user-menu { width: 200px; padding: 24px 0; background: #ffffff; border-radius: 4px; }
@@ -22,7 +23,7 @@
 
 .user .main-content { margin-left: 14px; background-color: #fff; border-radius: 4px; width: 984px; padding: 30px; }
 
-.user .main-content .main-title { display: inline-block; border-bottom: 4px solid #bad9f7; margin-bottom: 60px; }
+.user .main-content .main-title { display: inline-block; border-bottom: 4px solid #bad9f7; margin-bottom: 30px; }
 
 .user .main-content .main-title span { font-size: 18px; font-family: Microsoft YaHei Bold, Microsoft YaHei Bold-Bold; font-weight: 700; position: relative; left: 4px; bottom: -7px; }
 
@@ -148,9 +149,49 @@
 
 .user .main-content .provide-sign .provide-verify .title { color: #333; font-size: 24px; font-weight: 700; margin: 0; }
 
-.user .main-content .information form { padding-left: 80px; }
+.user .main-content .myvip-tabs { border-bottom: 1px solid #e6e6e6; }
 
-.user .main-content .information form .form-item { margin-bottom: 30px; }
+.user .main-content .myvip-tabs ul li { height: 50px; line-height: 50px; float: left; position: relative; top: 1px; }
+
+.user .main-content .myvip-tabs ul .active { font-weight: 700; border-bottom: 2px solid #e02e2e; }
+
+.user .main-content .msg-tabs { border-bottom: 1px solid #e6e6e6; }
+
+.user .main-content .msg-tabs ul li { height: 50px; line-height: 50px; float: left; position: relative; top: 1px; margin-left: 50px; cursor: pointer; }
+
+.user .main-content .msg-tabs ul li:first-child { margin-left: 0; }
+
+.user .main-content .msg-tabs ul .active { border-bottom: 4px solid #e02e2e; }
+
+.user .main-content .msg-content { margin-top: 25px; }
+
+.user .main-content .msg-content .msg-item { position: relative; height: 43px; border: 1px solid #e9ebf0; border-radius: 2px; font-size: 14px; padding: 15px 20px; margin-top: 15px; }
+
+.user .main-content .msg-content .msg-item .msg-type { font-weight: 700; margin-right: 10px; }
+
+.user .main-content .msg-content .msg-item .msg-main .msg-title span { display: inline-block; width: 6px; height: 6px; background-color: #e02e2e; border-radius: 50%; position: relative; top: -2px; }
+
+.user .main-content .msg-content .msg-item .msg-main .msg-time { color: #999; font-size: 12px; line-height: 24px; }
+
+.user .main-content .msg-content .msg-item .msg-btn { position: absolute; right: 30px; top: 25px; }
+
+.user .main-content .invite-content .invite-title { font-size: 14px; }
+
+.user .main-content .invite-content .invite-link { display: flex; flex-wrap: nowrap; border-radius: 4px; overflow: hidden; }
+
+.user .main-content .invite-content .invite-link input { line-height: 54px; background: #e8eaed; flex: 1; color: #999; font-size: 14px; text-indent: 45px; }
+
+.user .main-content .invite-content .invite-link-btn { width: 140px; color: #fff; height: 52px; line-height: 52px; background-color: #e02e2e; text-align: center; border: 1px solid #e02e2e; cursor: pointer; }
+
+.user .main-content .invite-content .invite-link-btn:hover { background-color: #fff; color: #e02e2e; }
+
+.user .main-content .invite-content p { color: #999; font-size: 12px; line-height: 22px; }
+
+.user .main-content .information form { padding: 0 80px; }
+
+.user .main-content .information form .divider-e5 { border-bottom: 1px dashed #e5e5e5; }
+
+.user .main-content .information form .form-item { margin-bottom: 30px; position: relative; }
 
 .user .main-content .information form .form-item .label { width: 80px; float: left; font-size: 14px; color: #999; line-height: 40px; }
 
@@ -172,6 +213,10 @@
 
 .user .main-content .information form .form-item .radio-box input[type="radio"]:checked + label::before { background-clip: content-box; background-image: linear-gradient(#be0101 0%, #f53341 100%); width: 10px; height: 10px; padding: 3px; }
 
+.user .main-content .information form .form-item input[type="date"] { height: 38px; width: 365px; line-height: 38px; text-indent: 10px; border: 1px solid #e6e6e6; border-radius: 4px; font-size: 14px; }
+
+.user .main-content .information form .form-item input[type="date"]::-webkit-datetime-edit { /* content: '起始时间'; */ color: #bcbcbc; }
+
 .user .main-content .information form .form-item .form-text { line-height: 40px; font-size: 14px; }
 
 .user .main-content .information form .form-item .form-text span { margin-right: 15px; }
@@ -179,6 +224,34 @@
 .user .main-content .information form .form-item .form-text a { color: #3a95fc; }
 
 .user .main-content .information form .form-item .form-text a:hover { text-decoration: underline; }
+
+.user .main-content .information form .form-item .select { cursor: pointer; }
+
+.user .main-content .information form .form-item .options { text-indent: 10px; background: #ffffff; border: 1px solid #e6e6e6; border-radius: 4px; font-size: 14px; width: 365px; overflow-y: scroll; height: 150px; position: absolute; left: 80px; top: 40px; z-index: 10; }
+
+.user .main-content .information form .form-item .options div:hover { background-color: #999; cursor: pointer; }
+
+.user .main-content .information .bind-box { padding: 0 80px; }
+
+.user .main-content .information .bind-box .title { margin-top: 25px; color: #666666; }
+
+.user .main-content .information .bind-box .bind-items { margin-top: 20px; }
+
+.user .main-content .information .bind-box .bind-items .bind-item { float: left; font-size: 14px; }
+
+.user .main-content .information .bind-box .bind-items .bind-item span { margin-left: 10px; line-height: 42px; }
+
+.user .main-content .information .bind-box .bind-items .bind-item .iconfont { font-size: 42px; position: relative; top: 10px; color: #ccc; }
+
+.user .main-content .information .bind-box .bind-items .bind-item button { height: 28px; line-height: 28px; border: 1px solid #e5e5e5; border-radius: 4px; font-size: 14px; text-align: center; width: 100px; background: #fff; cursor: pointer; margin-left: 35px; }
+
+.user .main-content .information .bind-box .bind-items .bind-item button:hover { border: 1px solid #e02e2e; color: #e02e2e; }
+
+.user .main-content .information .bind-box .bind-items .bind-qq .isbind { color: #16B5FF; }
+
+.user .main-content .information .bind-box .bind-items .bind-wx { margin-left: 124px; }
+
+.user .main-content .information .bind-box .bind-items .bind-wx .isbind { color: #00C800; }
 
 .step { position: relative; }
 

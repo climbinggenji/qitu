@@ -70,7 +70,7 @@
         .main-title {
             display: inline-block;
             border-bottom: 4px solid #bad9f7;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
 
             span {
                 font-size: 18px;
@@ -499,12 +499,135 @@
             }
         }
 
+        // 我的vip
+        .myvip-tabs {
+            border-bottom: 1px solid #e6e6e6;
+            ul {
+                li {
+                    height: 50px;
+                    line-height: 50px;
+                    float: left;
+                    position: relative;
+                    top: 1px;
+                }
+                .active {
+                    font-weight: 700;
+                    border-bottom: 2px solid #e02e2e;
+                }
+            }
+        }
+
+        // 站内信
+        .msg-tabs {
+            border-bottom: 1px solid #e6e6e6;
+            ul {
+                li {
+                    height: 50px;
+                    line-height: 50px;
+                    float: left;
+                    position: relative;
+                    top: 1px;
+                    margin-left: 50px;
+                    cursor: pointer;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+                .active {
+                    border-bottom: 4px solid #e02e2e;
+                }
+            }
+        }
+        .msg-content {
+            margin-top: 25px;
+            .msg-item {
+                position: relative;
+                height: 43px;
+                border: 1px solid #e9ebf0;
+                border-radius: 2px;
+                font-size: 14px;
+                padding: 15px 20px;
+                margin-top: 15px;
+                .msg-type {
+                    font-weight: 700;
+                    margin-right: 10px;
+                }
+                .msg-main {
+                    .msg-title {
+                        span {
+                            display: inline-block;
+                            width: 6px;
+                            height: 6px;
+                            background-color: #e02e2e;
+                            border-radius: 50%;
+                            position: relative;
+                            top: -2px;
+                        }
+                    }
+                    .msg-time {
+                        color: #999;
+                        font-size: 12px;
+                        line-height: 24px;
+                    }
+                }
+                .msg-btn {
+                    position: absolute;
+                    right: 30px;
+                    top: 25px;
+                }
+            }
+        }
+
+        // 邀请有礼
+        .invite-content {
+            .invite-title {
+                font-size: 14px;
+            }
+            .invite-link {
+                display: flex;
+                flex-wrap: nowrap;
+                border-radius: 4px;
+                overflow: hidden;
+                input {
+                    line-height: 54px;
+                    background: #e8eaed;
+                    flex: 1;
+                    color: #999;
+                    font-size: 14px;
+                    text-indent: 45px;
+                }
+                &-btn {
+                    width: 140px;
+                    color: #fff;
+                    height: 52px;
+                    line-height: 52px;
+                    background-color: #e02e2e;
+                    text-align: center;
+                    border:1px solid #e02e2e;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #fff;
+                        color: #e02e2e;
+                    }
+                }
+            }
+            p {
+                color: #999;
+                font-size: 12px;
+                line-height: 22px;
+            }
+        }
+
         // 基本资料
         .information {
             form {
-                padding-left: 80px;
+                padding: 0 80px;
+                .divider-e5 {
+                    border-bottom: 1px dashed #e5e5e5;
+                }
                 .form-item {
                     margin-bottom: 30px;
+                    position: relative;
                     .label {
                         width: 80px;
                         float: left;
@@ -582,6 +705,20 @@
                             padding:3px;
                         }
                     }
+                    // 时间编辑器
+                    input[type="date"] {
+                        height: 38px;
+                        width: 365px;
+                        line-height: 38px;
+                        text-indent: 10px;
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                        font-size: 14px;
+                    }
+                    input[type="date"]::-webkit-datetime-edit{
+                            /* content: '起始时间'; */
+                            color: rgb(188,188,188);
+                        }
                     .form-text {
                         line-height: 40px;
                         font-size: 14px;
@@ -593,6 +730,81 @@
                             &:hover {
                                 text-decoration: underline;
                             }
+                        }
+                    }
+                    .select  {
+                        cursor: pointer;
+                    }
+                    .options {
+                        text-indent: 10px;
+                        background: #ffffff;
+                        border: 1px solid #e6e6e6;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        width: 365px;
+                        overflow-y: scroll;
+                        height: 150px;
+                        position: absolute;
+                        left: 80px;
+                        top: 40px;
+                        z-index: 10;
+                        div {
+                            &:hover {
+                                background-color: #999;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bind-box {
+                padding: 0 80px;
+                .title {
+                    margin-top: 25px;
+                    color: #666666;
+                }
+                .bind-items {
+                    margin-top: 20px;
+                    .bind-item {
+                        float: left;
+                        font-size: 14px;
+                        span {
+                            margin-left: 10px;
+                            line-height: 42px;
+                        }
+                        .iconfont {
+                            font-size: 42px;
+                            position: relative;
+                            top: 10px;
+                            color: #ccc;
+                        }
+                        button {
+                            height: 28px;
+                            line-height: 28px;
+                            border: 1px solid #e5e5e5;
+                            border-radius: 4px;
+                            font-size: 14px;
+                            text-align: center;
+                            width: 100px;
+                            background: #fff;
+                            cursor: pointer;
+                            margin-left: 35px;
+                            &:hover {
+                                border: 1px solid #e02e2e;
+                                color: #e02e2e;
+                            }
+                        }
+                    }
+                    .bind-qq {
+                        .isbind {
+                            color: #16B5FF;
+                        }
+                    }
+                    .bind-wx {
+                        margin-left: 124px;
+                        .isbind {
+                            color: #00C800;
                         }
                     }
                 }
