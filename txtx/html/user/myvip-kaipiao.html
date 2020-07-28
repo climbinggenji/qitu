@@ -144,19 +144,7 @@
                 <a href="gerenzhongxin.html"><li><i class="iconfont">&#xe611;</i> <span>个人中心</span></li></a>
                 <a href="wodexiazai.html"><li><i class="iconfont">&#xe61b;</i> <span>下载记录</span></li></a>
                 <a href="wodeshoucang.html"><li><i class="iconfont">&#xe619;</i> <span>我的收藏</span></li></a>
-                <a href="myvip.html"><li class="active"><i class="iconfont">&#xe620;</i> <span>我的VIP</span></li></a>
-                <li class="handle-zijin-list"><i class="iconfont">&#xe622;</i> <span>资金管理 </span><div class="arrow arrow-down"></div></li>
-                <ul class="zijin-list" style="display: none;">
-                    <a href="zijinguanli/zhanghubind.html">
-                        <li>账户绑定</li>
-                    </a>
-                    <a href="zijinguanli/shujutongji">
-                        <li>数据统计</li>
-                    </a>
-                    <a href="zijinguanli/tixian">
-                        <li>提现</li>
-                    </a>
-                </ul>
+                <a><li class="active"><i class="iconfont">&#xe620;</i> <span>我的VIP</span></li></a>
                 <a href="jibenziliao.html"><li><i class="iconfont">&#xe612;</i> <span>基本资料</span></li></a>
                 <a href="message.html"><li><i class="iconfont">&#xe61a;</i> <span>站内信</span></li></a>
                 <a href="invite.html"><li><i class="iconfont">&#xe61c;</i> <span>邀请有礼</span></li></a>
@@ -171,11 +159,14 @@
                         <li>VIP记录</li>
                     </a>
                     <a>
-                        <li class="active" style="margin-left: 55px;">线上开票</li>
+                        <li class="active" style="margin-left: 55px;">申请发票</li>
+                    </a>
+                    <a href="myvip-kaipiaojilu.html">
+                        <li style="margin-left: 55px;">开票记录</li>
                     </a>
                 </ul>
             </div>
-            <table class="layui-hide" id="kaipiao-table"></table>
+            <table class="layui-hide" id="vip-record"></table>
         </div>
     </div>
     <script src="../../js/footer.js"></script>
@@ -186,7 +177,7 @@
             var table = layui.table;
 
             table.render({
-                elem: '#kaipiao-table',
+                elem: '#vip-record',
                 url: 'user/vipList',
                 cellMinWidth: 80,
                 cols: [
@@ -211,10 +202,9 @@
                             width: 150
                         }, {
                             field: '',
-                            title: '电子发票',
-                            width: 150,
+                            title: '开票',
                             ttemplet: function(d) {
-                                retuirn `<div>发送至邮箱</div>`
+                                retuirn `<div data-value=${d}>申请发票</div>`
                             }
                         }
                     ]

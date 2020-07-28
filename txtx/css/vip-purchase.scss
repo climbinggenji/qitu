@@ -176,9 +176,35 @@
                             padding: 10px;
                             border: 1px solid #e6e6e6;
                             border-radius: 4px;
+                            background-image: url(//js.photophoto.cn/web/v1/imgs/erweima_bg.png);
+                            background-size: 178px 178px;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            position: relative;
                             img {
                                 width: 178px;
                                 height: 178px;
+                            }
+                            .qrcode-mask {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                background-color: rgba($color: #fff, $alpha: 0.9);
+                                text-align: center;
+                                display: none;
+                                p {
+                                    margin-top: 80px;
+                                    a {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        .code-box-unlogin {
+                            .qrcode-mask {
+                                display: block;
                             }
                         }
                         &-title {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图行天下</title></title>
+    <link rel="stylesheet" href="../../assets/layui/css/layui.css">
     <link rel="stylesheet" href="../../css/txtx.css">
     <link rel="stylesheet" href="../../css/common.min.css">
     <link rel="stylesheet" href="../../css/user.min.css">
@@ -138,32 +139,9 @@
         <div class="user-menu fl">
             <ul>
                 <a href="gerenzhongxin.html"><li><i class="iconfont">&#xe611;</i> <span>个人中心</span></li></a>
-                <a><li class="active"><i class="iconfont">&#xe61b;</i> <span>我的下载</span></li></a>
+                <a href="wodexiazai.html"><li class="active"><i class="iconfont">&#xe61b;</i> <span>下载记录</span></li></a>
                 <a href="wodeshoucang.html"><li><i class="iconfont">&#xe619;</i> <span>我的收藏</span></li></a>
-                <li class="handle-provide-list">
-                    <i class="iconfont">&#xe621;</i> <span>我要供图 </span><div class="arrow arrow-down"></div>
-                </li>
-                <ul class="provide-menu-list" style="display: none;">
-                    <a href="wygt/shenqingqianyue/shenqingqianyue-1.html">
-                        <li>申请签约</li>
-                    </a>
-                    <li>上传图片</li>
-                    <li>作品管理</li>
-                    <li>作品规范</li>
-                    <li>收益统计</li>
-                </ul>
-                <li class="handle-zijin-list"><i class="iconfont">&#xe622;</i> <span>资金管理 </span><div class="arrow arrow-down"></div></li>
-                <ul class="zijin-list" style="display: none;">
-                    <a href="zijinguanli/zhanghubind.html">
-                        <li>账户绑定</li>
-                    </a>
-                    <a href="zijinguanli/shujutongji">
-                        <li>数据统计</li>
-                    </a>
-                    <a href="zijinguanli/tixian">
-                        <li>提现</li>
-                    </a>
-                </ul>
+                <a href="myvip.html"><li><i class="iconfont">&#xe620;</i> <span>我的VIP</span></li></a>
                 <a href="jibenziliao.html"><li><i class="iconfont">&#xe612;</i> <span>基本资料</span></li></a>
                 <a href="message.html"><li><i class="iconfont">&#xe61a;</i> <span>站内信</span></li></a>
                 <a href="invite.html"><li><i class="iconfont">&#xe61c;</i> <span>邀请有礼</span></li></a>
@@ -172,9 +150,69 @@
         <div class="main-content fl">
             <!-- 我的下载 -->
             <div class="main-title"><span>下载记录</span></div>
+            <div class="xiazai-head clearfix">
+                <form class="layui-form fl" action="">
+                    <div class="layui-form-item">
+                        <div class="xiazai-select">
+                            <select name="city" lay-verify="">
+                                <option value="0">所有下载</option>
+                                <option value="1" selected>一个月内下载</option>
+                                <option value="2">三个月内下载</option>
+                                <option value="3">半年内下载</option>
+                                <option value="4">一年内下载</option>
+                            </select>    
+                        </div>
+                      </div>
+                </form>
+                <div class="xiazai-search fl">
+                    <input type="text" placeholder="输入关键字或ID搜索">
+                    <a href=""><i class="iconfont">&#xe671;</i></a>
+                </div>
+            </div>
+            <div class="xiazai-list">
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex1.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex2.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex3.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex4.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex1.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex2.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex3.png);"></div></a>
+                </div>
+                <div class="xiazai-item">
+                    <a href=""><div style="background-image: url(//js.photophoto.cn/web/v1/imgs/ex4.png);"></div></a>
+                </div>
+            </div>
+            <div class="fr" id="my-xiazai-paging"></div>
         </div>
     </div>
     <script src="../../js/footer.js"></script>
     <script src="../../js/user.js"></script>
+    <script src="../../assets/layui/layui.js"></script>
+    <script>
+        layui.use(['form', 'laypage'], function() {
+            var form = layui.form;
+            var laypage = layui.laypage;
+            laypage.render({
+                elem: 'my-xiazai-paging' //注意，这里的 test1 是 ID，不用加 # 号
+                    ,
+                count: 50 // 数据总数，从服务端得到
+                ,limit: 6 // 每页个数
+                ,theme: '#e02e2e'
+            });
+        })
+    </script>
 </body>
 </html>

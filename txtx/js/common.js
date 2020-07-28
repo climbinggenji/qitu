@@ -8,6 +8,18 @@ window.addEventListener('scroll', function() {
     }
 })
 
+// 登录弹窗
+function popLogin() {
+    $('#login-box').show();
+    $('#mask').show();
+}
+
+// 关闭遮罩层  弹窗 公用类pop-main
+function popOff() {
+    $('.pop-main').hide();
+    $('#mask').hide();
+}
+
 // 分页器mini
 var isPageMiniDisable = function(current) {
     if (current == 1) $('.icon-left').addClass('disable');
@@ -19,7 +31,7 @@ $(function() {
     $('.icon-right').click(function() {
         if (current < 28) {
             if (current == 1) {
-                $('.icon-left').removeClass('disable')
+                $('.icon-left').removeClass('disable');
             }
             current++;
             $('#paging-mini-current').text(current);
@@ -29,7 +41,7 @@ $(function() {
     $('.icon-left').click(function() {
         if (current > 1) {
             if (current == 28) {
-                $('.icon-right').removeClass('disable')
+                $('.icon-right').removeClass('disable');
             }
             current--;
             $('#paging-mini-current').text(current);
@@ -39,19 +51,19 @@ $(function() {
 
     // 登录弹窗
     $('.btn-login').click(function() {
-        $('#login-box').css('display', 'block');
-        $('#mask').css('display', 'block');
+        popLogin()
     });
-    $('.login-box-close').click(function() {
-        $('#login-box').css('display', 'none');
-        $('#mask').css('display', 'none');
-    });
+    $('.qrcode-mask').find('a').on('click', function() {
+        popLogin();
+    })
     // 遮罩层
     $('#mask').click(function() {
-        $('#login-box').css('display', 'none');
-        $('#mask').css('display', 'none');
-        $('#report-box').hide();
+        popOff();
     });
+    $('.pop-main').find('.close-icon').on('click', function() {
+        popOff();
+    })
+
     $('.login-toRegister').click(function() {
         $('#login-box').removeClass().addClass('register')
     })
@@ -69,22 +81,6 @@ $(function() {
         $(this).html('&#xe606;')
         $(this).prev().attr('type', 'password');
     });
-    // 登录滑块插件
-    // $('#slide').slider({
-    //     width: 320,
-    //     height: 33,
-    //     sliderBg:"#e8e8e8",// 滑块背景颜色
-    //     color:"#333",// 文字颜色
-    //     fontSize: 12, // 文字大小
-    //     bgColor: "#33CC00", // 背景颜色
-    //     textMsg: "请按住滑块，拖动到最右边", // 提示文字
-    //     successMsg: "验证通过", // 验证成功提示文字
-    //     successColor: "red", // 滑块验证成功提示文字颜色
-    //     time: 400, // 返回时间
-    //     callback: function(result) { // 回调函数，true(成功),false(失败)
-    //         $("#result2").text(result);
-    //     }
-    // })
 
     // 搜索框select
     $('.select-option ul li').click(function() {
@@ -107,7 +103,7 @@ $(function() {
     $('.footer-links-nav ul li').click(function() {
         if (!$(this).hasClass('active')) {
             $(this).addClass('active').siblings().removeClass();
-            $('.footer-links-item ul:nth-child('+($(this).index()+1)+')').css('display', 'block').siblings().css('display', 'none');
+            $('.footer-links-item ul:nth-child('+($(this).index()+1)+')').css('display', 'block').siblings().hide();
         }
     })
 

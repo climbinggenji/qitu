@@ -155,18 +155,18 @@
             <div class="main-title"><span>基本资料</span></div>
             <div class="myvip-tabs clearfix">
                 <ul>
-                    <a>
-                        <li class="active">VIP记录</li>
+                    <a href="myvip.html">
+                        <li>VIP记录</li>
                     </a>
                     <a href="myvip-kaipiao.html">
                         <li style="margin-left: 55px;">申请发票</li>
                     </a>
-                    <a href="myvip-kaipiaojilu.html">
-                        <li style="margin-left: 55px;">开票记录</li>
+                    <a>
+                        <li class="active" style="margin-left: 55px;">开票记录</li>
                     </a>
                 </ul>
             </div>
-            <table class="layui-hide" id="vip-record"></table>
+            <table class="layui-hide" id="kaipiao-table"></table>
         </div>
     </div>
     <script src="../../js/footer.js"></script>
@@ -177,33 +177,39 @@
             var table = layui.table;
 
             table.render({
-                elem: '#vip-record',
+                elem: '#kaipiao-table',
                 url: 'user/vipList',
                 cellMinWidth: 80,
                 cols: [
                     [{
                             field: 'type',
-                            width: 180,
+                            width: 150,
                             title: 'VIP类型',
                             templet: function(d) {
                                 retuirn `<div>${d.type ? '超级' : '基础'}vip</div>`
                             }
                         }, {
                             field: 'beginTime',
-                            width: 250,
+                            width: 210,
                             title: '开通时间'
                         }, {
                             field: 'endTime',
-                            width: 250,
+                            width: 210,
                             title: '有效期至'
                         }, {
-                            field: 'time',
-                            width: 150,
-                            title: '时长'
+                            field: 'purchaseType',
+                            title: '充值方式',
+                            width: 100
                         }, {
                             field: 'purchaseType',
-                            title: '开通方式',
-                            width: 150
+                            title: '状态',
+                            width: 100
+                        }, {
+                            field: '',
+                            title: '电子发票',
+                            ttemplet: function(d) {
+                                retuirn `<div data-value=${d}>查看发票</div>`
+                            }
                         }
                     ]
                 ]

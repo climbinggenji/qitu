@@ -9,9 +9,7 @@
 
 .header-content-logo a { display: block; width: 100%; height: 100%; }
 
-.header-content-nav { position: absolute; left: 0; right: 0; top: 0; height: 0; text-align: center; }
-
-.header-content-nav ul { display: inline-block; }
+.header-content-nav ul { margin-left: 30px; }
 
 .header-content-nav ul .active { border-bottom: 3px solid #e02e2e; }
 
@@ -19,8 +17,7 @@
 
 .header-content-nav ul li { float: left; font-size: 14px; padding: 0 17px; line-height: 65px; position: relative; }
 
-@media screen and (max-width: 1280px) { .header-content-nav ul li { padding: 0 10px; }
-  .header-content-nav ul li:last-child { display: none; } }
+@media screen and (max-width: 1280px) { .header-content-nav ul li { padding: 0 10px; } }
 
 .header-content-nav ul li .secondary { width: 579px; height: 284px; background-color: #fff; border-radius: 2px; box-shadow: 0 3px 10px 10px rgba(73, 73, 73, 0.35); position: absolute; opacity: 0; visibility: hidden; }
 
@@ -220,6 +217,8 @@
 .vip-download-banner { height: 100px; background: url(../imgs/vip-download1920.png) center center no-repeat; }
 
 #report-box { width: 320px; height: 342px; padding: 40px; background-color: #fff; position: fixed; top: 50%; left: 50%; margin-left: -200px; margin-top: -211px; z-index: 1002; display: none; }
+
+#report-box .close-icon { position: absolute; right: 10px; top: 10px; color: #999999; font-size: 12px; cursor: pointer; }
 
 #report-box .report-head { font-weight: 700; padding-bottom: 14px; border-bottom: 1px solid #ebebeb; }
 

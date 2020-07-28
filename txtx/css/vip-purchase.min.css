@@ -62,9 +62,17 @@
 
 .purchase-type-box .purchase-main .code { width: 600px; margin: 50px auto; }
 
-.purchase-type-box .purchase-main .code-box-qrcode { padding: 10px; border: 1px solid #e6e6e6; border-radius: 4px; }
+.purchase-type-box .purchase-main .code-box-qrcode { padding: 10px; border: 1px solid #e6e6e6; border-radius: 4px; background-image: url(//js.photophoto.cn/web/v1/imgs/erweima_bg.png); background-size: 178px 178px; background-position: center center; background-repeat: no-repeat; position: relative; }
 
 .purchase-type-box .purchase-main .code-box-qrcode img { width: 178px; height: 178px; }
+
+.purchase-type-box .purchase-main .code-box-qrcode .qrcode-mask { position: absolute; width: 100%; height: 100%; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.9); text-align: center; display: none; }
+
+.purchase-type-box .purchase-main .code-box-qrcode .qrcode-mask p { margin-top: 80px; }
+
+.purchase-type-box .purchase-main .code-box-qrcode .qrcode-mask p a { cursor: pointer; }
+
+.purchase-type-box .purchase-main .code-box .code-box-unlogin .qrcode-mask { display: block; }
 
 .purchase-type-box .purchase-main .code-box-title { line-height: 30px; text-align: center; }
 
