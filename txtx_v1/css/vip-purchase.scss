@@ -1,0 +1,333 @@
+.purchase {
+    width: 1030px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    &-tab {
+        width: 100%;
+        border-bottom: 1px solid #e4e6eb;
+        height: 60px;
+        &-option {
+            width: 50%;
+            float: left;
+            text-align: center;
+            line-height: 60px;
+            color: #999;
+            .option {
+                position: relative;
+                display: inline-block;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+                .vip-icon-box {
+                    display: inline-block;
+                    height: 20px;
+                    width: 22px;
+                    position: relative;
+                    .vip-icon {
+                        display: inline-block;
+                        height: 20px;
+                        width: 22px;
+                        overflow: hidden;
+                        background-image: url(//js.photophoto.cn/web/v1/imgs/vip-png.png);
+                        background-repeat: no-repeat;
+                        position: absolute;
+                        top: 4px;
+                        left: 0;
+                    }
+                    .vip-icon-vip {
+                        background-position: 0 -72px;
+                    }
+                    .vip-icon-svip {
+                        background-position: -51px -72px;
+                    }
+                }
+                
+            }
+        }
+        .active {
+            color: #333;
+            font-weight: 700;
+            .option {
+                .bb {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    height: 3px;
+                    background: linear-gradient(#f87047 0%, #ef553e 33%, #e84337 66%, #e8192d 100%);
+                }
+            }
+        }
+    }
+    &-type {
+        &-box {
+            width: 890px;
+            margin: 30px auto;
+            .purchase-item {
+                width: 158px;
+                height: 128px;
+                padding: 15px 20px;
+                border: 1px solid #e6e6e6;
+                border-radius: 4px;
+                text-align: center;
+                float: left;
+                margin-left: 30px;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                &:hover {
+                    border: 1px solid #ff6600;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &-main {
+                    border-bottom: 1px dashed #ebebeb;
+                    margin-top: 13px;
+                    .text-main {
+                        color: #ff6600;
+                        font-size: 14px;
+                        &>span {
+                            font-size: 42px;
+                        }
+                    }
+                    .text {
+                        font-size: 14px;
+                        color: #999;
+                        text-decoration: line-through;
+                    }
+                    .desc-main {
+                        height: 27px;
+                        font-size: 12px;
+                        line-height: 27px;
+                        color: #999;
+                    }
+                }
+                &-time {
+                    font-size: 14px;
+                }
+                .tag-text {
+                    position: absolute;
+                    width: 108px;
+                    height: 20px;
+                    right: 0;
+                    top: 0;
+                    background-color: #ff6600;
+                    color: #fff;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                .tag-icon {
+                    position: absolute;
+                    .iconfont {
+                        width: 18px;
+                        position: absolute;
+                        left: -20px;
+                        top: 20px;
+                        color: #fff;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .active {
+                .tag-icon {
+                    right: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 0;
+                    border-bottom: 40px solid #ff6600;
+                    border-left: 40px solid transparent;
+                }
+            }
+            h2 {
+                margin: 20px 0;
+                font-weight: 400;
+            }
+            .purchase-main {
+                width: 830px;
+                margin: 20px auto;
+                padding: 30px;
+                border: 1px dashed #e6e6e6;
+                border-radius: 4px;
+                position: relative;
+                .mention {
+                    font-size: 12px;
+                    color: #ccc;
+                    position: absolute;
+                    right: 15px;
+                    top: 15px;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                &>p {
+                    text-align: center;
+                    span {
+                        color: #ff6600;
+                        font-size: 32px;
+                    }
+                }
+                .code {
+                    width: 600px;
+                    margin: 50px auto;
+                    &-box {
+                        &-qrcode {
+                            padding: 10px;
+                            border: 1px solid #e6e6e6;
+                            border-radius: 4px;
+                            position: relative;
+                            width: 178px;
+                            height: 178px;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                            #qrcode-saomiao {
+                                position: absolute;
+                                top: 10px;
+                                left: 10px;
+                            }
+                            .qrcode-mask {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                top: 0;
+                                left: 0;
+                                background-color: rgba($color: #fff, $alpha: 0.9);
+                                text-align: center;
+                                display: none;
+                                p {
+                                    margin-top: 80px;
+                                    a {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                        &-zhifubao {
+                            border: 1px solid #02AAEF;
+                            width: 178px;
+                            height: 178px;
+                            padding: 10px;
+                            background-image: url(//js.photophoto.cn/web/v1/imgs/zhifubao-zhifu.png);
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                        }
+                        .code-box-unlogin {
+                            .qrcode-mask {
+                                display: block;
+                            }
+                        }
+                        &-title {
+                            line-height: 30px;
+                            text-align: center;
+                            .iconfont {
+                                position: relative;
+                                top: 5px;
+                                font-size: 28px;
+                                color: #09bb07;
+                            }
+                        }
+                        a {
+                            cursor: pointer;
+                        }
+                    }
+                    .code-zfb {
+                        .code-box-title {
+                            color: #02AAEF;
+                            .iconfont {
+                                color: #02AAEF
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .purchase-svip {
+            .purchase-item {
+                &-main {
+                    .text-main {
+                        color: #e02e2e;
+                    }
+                }
+                .tag-text {
+                    background-color: #e02e2e;
+                }
+                &:hover {
+                    border: 1px solid #e02e2e;
+                }
+            }
+            .purchase-main {
+                &>p {
+                    &>span {
+                        color: #e02e2e;
+                    }
+                }
+            }
+            .active {
+                .tag-icon {
+                    border-bottom: 40px solid #e02e2e;
+                }
+            }
+        }
+    }
+    .notice {
+        width: 890px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        p {
+            color: #999;
+            font-size: 14px;
+            line-height: 20px;
+            &:first-child {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .success {
+        width: 420px;
+        height: 290px;
+        background: #ffffff;
+        border-radius: 4px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -210px;
+        margin-top: -145px;
+        text-align: center;
+        z-index: 1002;
+        .iconfont {
+            position: absolute;
+            color: #cbcbcb;
+            right: 12px;
+            top: 12px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        &-head {
+            text-align: left;
+            font-size: 14px;
+            line-height: 40px;
+            border-bottom: 1px solid #edeff5;
+            text-indent: 20px;
+        }
+        img {
+            width: 112px;
+            height: 136px;
+            margin-top: 12px;
+        }
+        h4 {
+            margin-top: 15px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 14px;
+            color: #999999;
+            margin-top: 15px;
+            span {
+                color: #E02E2E;
+            }
+        }
+    }
+}

@@ -56,6 +56,12 @@ $(function() {
     $('.qrcode-mask').find('a').on('click', function() {
         popLogin();
     })
+    $('.login-duanxin').on('click', function() {
+        $('#login-box').removeClass('erweima').addClass('login');
+    })
+    $('.login-erweima').on('click', function() {
+        $('#login-box').removeClass('login').addClass('erweima');
+    })
     // 遮罩层
     $('#mask').click(function() {
         popOff();
@@ -70,17 +76,6 @@ $(function() {
     $('.login-header-right').click(function() {
         $('#login-box').removeClass().addClass('login')
     })
-    // 密码隐藏/显示
-    $('.login-password').on('click', '.psw-hide', function() {
-        $(this).removeClass('psw-hide').addClass('psw-on');
-        $(this).html('&#xe608;')
-        $(this).prev().attr('type', 'text');
-    });
-    $('.login-password').on('click','.psw-on', function() {
-        $(this).removeClass('psw-on').addClass('psw-hide');
-        $(this).html('&#xe606;')
-        $(this).prev().attr('type', 'password');
-    });
 
     // 搜索框select
     $('.select-option ul li').click(function() {

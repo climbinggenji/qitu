@@ -53,9 +53,15 @@
         }
 
         &-nav {
-
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            text-align: center;
+            
             ul {
-                margin-left: 30px;
+                display: inline-block;
                 .active {
                     border-bottom: 3px solid #e02e2e;
 
@@ -125,6 +131,21 @@
                 &:hover {
                     background-color: #fff;
                     color: #e02e2e;
+                }
+            }
+
+            .header-touxiang {
+                &-pic {
+                    display: inline-block;
+                    vertical-align: middle;
+                    width: 40px;
+                    height: 40px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
                 }
             }
         }
@@ -1016,7 +1037,10 @@
 
 .footer {
     background-color: #edf1f2;
-    position: relative;
+    &::before {
+        display: block;
+        height: 100%;
+    }
 
     @media screen and (max-width: 1280px) {
         .footer-helper {
@@ -1249,7 +1273,7 @@
 // 登录窗口，模态框
 #login-box {
     width: 400px;
-    height: 544px;
+    height: 473px;
     background: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 4px;
@@ -1275,18 +1299,18 @@
         &-left {
             font-weight: 700;
         }
-        &-right {
-            font-size: 12px;
-            padding-top: 5px;
-            color: #e02e2e;
-            cursor: pointer;
-            .iconfont {
-                font-size: 12px;
-            }
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+    }
+    .login-erweima {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 40px;
+    }
+    .login-duanxin {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px;
     }
     .login-divider {
         margin: 14px 0 20px 0;
@@ -1364,6 +1388,29 @@
             }
         }
     }
+    .erweima-main {
+        text-align: center;
+        .erweima-login-pic {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+        }
+        &-foot {
+            margin-top: 50px;
+            display: inline-block;
+            img {
+                position: relative;
+                top: 5px;
+            }
+            p {
+                line-height: 20px;
+                font-size: 14px;
+                color: #666;
+                margin-left: 15px;
+                text-align: left;
+            }
+        }
+    }
     .login-agree {
         margin-top: 10px;
         &-radio {
@@ -1389,16 +1436,6 @@
             #agreement:checked+.agree-radio {
                 background: #ff6600 url(../imgs/duigou.png) center center no-repeat;
             }
-        }
-    }
-    .login-toRegister {
-        color: #ff6600;
-        font-size: 12px;
-        margin-top: 10px;
-        line-height: 24px;
-        cursor: pointer;
-        &:hover {
-            text-decoration: underline;
         }
     }
     .btn {
@@ -1457,30 +1494,23 @@
             border-right: 1px solid #ebebeb;
         }
     }
-    .qrcode-box {
+}
 
-    }
-}
-.register {
-    .login-box,.login-agree,.register-btn,.register-title,.right-register {
-        display: block;
-    }
-    .login-title,.login-btn,.right-login {
-        display: none;
-    }
-    .login-toRegister {
-        display: none;
-    }
-}
 .login {
-    .login-agree,.register-btn,.register-title,.right-register {
+    .login-duanxin, .erweima-main {
         display: none;
     }
-    .login-title,.login-btn,.right-login,.login-box {
+    .login-box, .login-erweima {
         display: block;
     }
-    .login-toRegister {
-        display: inline-block;
+}
+
+.erweima {
+    .login-duanxin, .erweima-main {
+        display: block;
+    }
+    .login-box, .login-erweima {
+        display: none;
     }
 }
 

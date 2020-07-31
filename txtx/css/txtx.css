@@ -93,6 +93,7 @@ body {
     font: 16px "微软雅黑";
     background-color: #f2f6f7;
     font-weight: 400;
+    position: relative;
 }
 
 a:hover {
