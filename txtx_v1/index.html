@@ -12,10 +12,6 @@
     <link rel="stylesheet" href="css/common.min.css">
     <link rel="stylesheet" href="css/index.min.css">
     <link rel="stylesheet" href="css/iconfont/iconfont.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/plugins/jquery.slider.min.js"></script>
-    <script src="js/common.js"></script>
 </head>
 
 <body>
@@ -69,10 +65,10 @@
                 <a href="html/user/gerenzhongxin.html" class="vip-box mr15">
                     个人VIP
                 </a>
-                <div class="btn-login fr mt18 font14" style="display: none;">
+                <div class="btn-login fr mt18 font14">
                     登录
                 </div>
-                <div class="header-touxiang fr">
+                <div class="header-touxiang fr"  style="display: none;">
                     <div class="header-touxiang-pic">
                         <img src="//js.photophoto.cn/web/v1/imgs/touxiang.png">
                         <i class="iconfont vip">&#xe63c;</i>
@@ -136,19 +132,26 @@
         </div>
         <div class="login-divider"></div>
         <div class="login-main">
-            <form action="">
+            <form action="validate" method="post">
                 <ul>
                     <li>
                         <input id="zhanghao" type="text" placeholder="输入账户名">
                         <div class="login-tips"></div>
                     </li>
                     <li>
-                        <input id="pasword" type="password" placeholder="输入密码">
+                        <input id="password" type="password" placeholder="输入密码">
                         <div class="login-tips"></div>
                     </li>
+                    <div>
+                        <label>完成验证：</label>
+                        <div id="captcha">
+                            <p id="wait" class="show">正在加载验证码......</p>
+                        </div>
+                    </div>
+                    <p id="notice" class="hide">请先完成验证</p>
                 </ul>
+                <input class="login-btn btn" id="submit" type="submit" value="登录" />
             </form>
-            <div class="login-btn btn">登录</div>
             <div class="third-text"><span>第三方账号登录</span></div>
             <div class="third-btn mt20">
                 <a onclick="window.open('','QQ登录图行天下', 'width=600,height=520,top=300,resizable=no')"><i
@@ -294,11 +297,11 @@
         <div class="preview-index clearfix">
             <div class="preview-box">
                 <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/preview.png" alt="">
-                <a href="" class="preview-mask"></a>
+                <a href="html/secondary-detail.html" class="preview-mask"></a>
                 <div class="banquan"></div>
                 <div class="preview-main">
                     <div class="preview-main-tag clearfix colected">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
+                        <a href="html/secondary-xiazai.html"><div class="preview-main-btn fl mr15">立即下载</div></a>
                         <div class="preview-main-favor fl">
                             <span class="favor-text font12">收藏</span>
                         </div>
@@ -828,12 +831,17 @@
             </a>
         </div>
     </div>
-    <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script>
         window.onload = function () {
             console.log(new Date().getTime() - t1)
         }
     </script>
+    <script src="js/index.js"></script>
+    <script src="js/plugins/jquery.slider.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
+    <script src="https://static.geetest.com/static/tools/gt.js"></script>
 </body>
 
 </html>

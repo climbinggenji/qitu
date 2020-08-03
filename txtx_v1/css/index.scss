@@ -356,6 +356,9 @@
             width: 150px;
             height: 40px;
             margin-left: 127px;
+            @media screen and (max-width: 1280px) {
+                margin-left: 63px;
+            }
             &:first-child {
                 margin-left: 0;
             }

@@ -17,8 +17,8 @@ if (window.location.search) {
         ZHIFU_DATA.click_type = request.click_type;
     }
     $('.purchase-item:eq(' + (request.check - 1) + ')').addClass('active');
-   // ZHIFU_DATA.pay_type = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').text();
-   ZHIFU_DATA.vip_id = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').attr('attr-id');
+    // ZHIFU_DATA.pay_type = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').text();
+    ZHIFU_DATA.vip_id = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').attr('attr-id');
     refeshLink(ZHIFU_DATA.erweima_URL);
 } else {
     $('.purchase-item:eq(2)').addClass('active');
@@ -29,8 +29,7 @@ if (window.location.search) {
 
 // 微信二维码请求过度动画
 function erweimaLoading(end) {
-    var e = document.getElementById('erweima-box');
-    var canvas = e.lastChild;
+    var canvas = document.getElementById('qrcode-saomiao');
     var ctx = canvas.getContext('2d');
     ctx.fillStyle = "#999999";
     ctx.fillRect(0, 0, 178, 178);
@@ -64,6 +63,7 @@ function erweimaLoading(end) {
 // 切换套餐生成二维码及支付宝外链
 $('.purchase-item').on('click', function () {
     if (!$(this).hasClass('active')) {
+        let index = $(this).index();
         $(this).addClass('active').siblings().removeClass('active');
         ZHIFU_DATA.vip_id = $(this).find('.text').attr('attr-id');
         refeshLink(ZHIFU_DATA.erweima_URL);
@@ -107,48 +107,40 @@ $('.tozhifubao').on('click', function () {
 
 
 // 二维码
-var lock = false;
 function refeshLink(url) {
-    if (!lock) {
-        $.ajax({
-            type: 'POST',
-            url: url,
-            data: {
-                vip_id: ZHIFU_DATA.vip_id,
-                pay_type: ZHIFU_DATA.pay_type,
-                click_type: ZHIFU_DATA.click_type
-            },
-            dataType: 'json',
-            beforeSend: function () {
-                // 发送请求前运行的函数
-                lock = true;
-                $('#qrcode-img').empty();
-                $('#erweima-box canvas').last().hide();
-                $('#erweima-box').append('<canvas width="178" height="178"></canvas>');
-                erweimaLoading();
-            },
-            success: function (res) {
-                // 请求成功
-                if (res.code == 200) {
-                    outputQRCod(res.src)
-                    // 延迟3秒查询订单
-                    store.wxOrderId = res.order_no;
-                    setTimeout(function () {
-                        startFetching(ZHIFU_DATA.wxlunxun_URL);
-                    }, 3 * 1000)
-                }
-            },
-            error: function() {
-                erweimaLoading(end = true);
-            },
-            complete: function () {
-                // 请求完成
-                erweimaLoading(end = true);
-                $('#erweima-box canvas').last().hide();
-                lock = false;
+    $.ajax({
+        type: 'POST',
+        url: url,
+        data: {
+            vip_id: ZHIFU_DATA.vip_id,
+            pay_type: ZHIFU_DATA.pay_type,
+            click_type: ZHIFU_DATA.click_type
+        },
+        dataType: 'json',
+        beforeSend: function () {
+            // 发送请求前运行的函数
+            $('#qrcode-img').empty();
+            $('#qrcode-saomiao').show();
+            erweimaLoading();
+        },
+        success: function (res) {
+            // 请求成功
+            // var data = JSON.parse(res);
+            if (res.code == 200) {
+                outputQRCod(res.src)
+                // 延迟3秒查询订单
+                store.wxOrderId = res.order_no;
+                setTimeout(function () {
+                    startFetching(ZHIFU_DATA.wxlunxun_URL);
+                }, 3 * 1000)
             }
-        })
-    }
+        },
+        complete: function () {
+            // 请求完成
+            erweimaLoading(end = true);
+            $('#qrcode-saomiao').hide();
+        }
+    })
 }
 
 // 轮询

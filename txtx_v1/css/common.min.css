@@ -264,13 +264,21 @@
 
 .xiazai-content-main .info p { margin-top: 20px; font-size: 14px; color: #999; }
 
-.xiazai-content-main .info .button { margin-top: 30px; width: 198px; height: 52px; line-height: 52px; text-align: center; display: inline-block; font-size: 18px; border-radius: 4px; overflow: hidden; cursor: pointer; }
+.xiazai-content-main .info .button-content { margin-top: 30px; }
 
-.xiazai-content-main .info .button .iconfont { font-size: 20px; }
+.xiazai-content-main .info .button-content .button { width: 198px; height: 52px; line-height: 52px; text-align: center; display: inline-block; font-size: 18px; border-radius: 4px; overflow: hidden; cursor: pointer; }
 
-.xiazai-content-main .info .button-vip { opacity: 0.92; background: linear-gradient(#e25656 0%, #e02e2e 100%); color: #fff; border: 1px solid #e25656; }
+.xiazai-content-main .info .button-content .button .iconfont { font-size: 20px; }
 
-.xiazai-content-main .info .button-free { opacity: 0.92; color: #999; border: 1px solid #e6e6e6; margin-left: 30px; }
+.xiazai-content-main .info .button-content .button-vip { opacity: 0.92; background: linear-gradient(to right, #e25656 0%, #e02e2e 100%); color: #fff; border: 1px solid #e25656; }
+
+.xiazai-content-main .info .button-content .button-free { opacity: 0.92; color: #999; border: 1px solid #e6e6e6; margin-left: 30px; }
+
+.xiazai-content-main .info #isdownload { color: #666; }
+
+.xiazai-content-main .info #isdownload .iconfont { color: #11B715; font-size: 46px; position: relative; top: 10px; }
+
+.xiazai-content-main .info #free-useup span { position: relative; bottom: 20px; margin-right: 20px; }
 
 .xiazai-content-main .report { position: absolute; font-size: 12px; color: #999; right: 15px; top: 15px; cursor: pointer; }
 
@@ -292,11 +300,17 @@
 
 #report-box .report-type input { cursor: pointer; border: 1px solid #e6e6e6; font-size: 14px; color: #999; line-height: 36px; text-indent: 10px; width: 100%; background-color: #fff; }
 
+#report-box .report-type ul { width: 100%; position: absolute; z-index: 1003; top: 36px; left: 0; }
+
+#report-box .report-type ul li { text-indent: 10px; height: 42px; line-height: 42px; font-size: 14px; cursor: pointer; background-color: #fff; }
+
+#report-box .report-type ul li:hover { background-color: #EDF1F5; }
+
 #report-box .report-type .iconfont { position: absolute; right: 20px; line-height: 38px; top: 0; color: #666; font-size: 10px; }
 
 #report-box .report-type span { font-size: 16px; position: absolute; line-height: 38px; left: -15px; top: 2px; color: #FF0000; font-weight: 700; }
 
-#report-box .report-type:hover input { border: 1px solid #e02e2e; }
+#report-box .selecting ul { border: 1px solid #e6e6e6; border-top: none; }
 
 #report-box .report-desc { position: relative; margin-top: 20px; }
 
@@ -442,6 +456,26 @@
 
 .footer-links-active .footer-links-nav, .footer-links-active .footer-links-item { display: block; }
 
+.footer-common { min-width: 1002px; height: 144px; background: #ffffff; margin-top: 50px; overflow: hidden; }
+
+.footer-common-link { position: relative; float: left; left: 50%; }
+
+.footer-common-link .link-list { position: relative; float: left; right: 50%; margin: 0 auto; text-align: center; height: 30px; }
+
+.footer-common-link .link-list ul li { width: 100px; font-size: 14px; text-align: center; float: left; border-left: 1px solid #d7dadb; }
+
+.footer-common-link .link-list ul li:first-child { border: none; }
+
+.footer-common .copyright { text-align: center; font-size: 12px; color: #999; }
+
+.footer-common .copyright p { margin-top: 10px; }
+
+.footer-common .copyright p a { color: #999; }
+
+.footer-common .copyright p a:hover { color: #e02e2e; }
+
+.footer-fixed { position: fixed; bottom: 0; width: 100%; }
+
 .bottom-nav { position: fixed; bottom: 100px; right: 36px; }
 
 .bottom-nav .bb { border-bottom: 1px solid #ececec; }
@@ -476,15 +510,23 @@
 
 #login-box .login-main li { margin-bottom: 10px; }
 
-#login-box .login-main input { height: 36px; line-height: 36px; width: 100%; background: #ffffff; border: 1px solid #e6e6e6; border-radius: 2px; font-size: 14px; text-indent: 13px; }
+#login-box .login-main li input { height: 36px; line-height: 36px; width: 100%; background: #ffffff; border: 1px solid #e6e6e6; border-radius: 2px; font-size: 14px; text-indent: 13px; }
 
-#login-box .login-main input:focus { border: 1px solid #14a8ec; }
+#login-box .login-main li input:focus { border: 1px solid #14a8ec; }
 
-#login-box .login-main .error { border: 1px solid #e02e2e; }
+#login-box .login-main li .error { border: 1px solid #e02e2e; }
 
-#login-box .login-main .login-tips { height: 20px; font-size: 12px; color: #e02e2e; line-height: 20px; text-indent: 13px; opacity: 0; }
+#login-box .login-main li .login-tips { font-size: 12px; height: 20px; color: #e02e2e; line-height: 20px; text-indent: 13px; opacity: 0; }
 
-#login-box .btn { height: 36px; line-height: 36px; text-align: center; background-color: #e02e2e; border: 1px solid #e02e2e; color: #fff; cursor: pointer; }
+#login-box #captcha { width: 300px; display: inline-block; }
+
+#login-box .show { display: block; }
+
+#login-box .hide { display: none; }
+
+#login-box #notice { color: red; }
+
+#login-box .btn { width: 100%; height: 36px; line-height: 36px; text-align: center; background-color: #e02e2e; border: 1px solid #e02e2e; color: #fff; cursor: pointer; }
 
 #login-box .btn:hover { color: #e02e2e; background-color: #fff; }
 

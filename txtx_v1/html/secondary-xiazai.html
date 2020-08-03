@@ -162,12 +162,21 @@
                 <p>格式：PSD</p>
                 <p>大小：32.5MB</p>
                 <p>尺寸：1920 x 1080px</p>
-                <div class="button button-vip"><i class="iconfont">&#xe62f;</i> 高速下载</div>
-                <div class="button button-free"><i class="iconfont">&#xe62e;</i> 普通下载</div>
+                <div id="xiazai-default" class="button-content">
+                    <div class="button button-vip"><i class="iconfont">&#xe62f;</i> 高速下载</div>
+                    <div class="button button-free"><i class="iconfont">&#xe62e;</i> 普通下载</div>
+                </div>
+                <div id="isdownload" class="button-content" style="display: none;">
+                    <i class="iconfont">&#xe641;</i>已开启下载 ···
+                </div>
+                <div id="free-useup" class="button-content" style="display: none;">
+                    <span>今日下载次数已用完</span> <div class="button button-vip">VIP免费下载</div>
+                </div>
             </div>
             <div class="report"><i class="iconfont">&#xe62d;</i> 举报素材</div>
         </div>
     </div>
+    <!-- 举报弹窗 -->
     <div id="report-box" class="pop-main">
         <i class="iconfont close-icon">&#xe607;</i>
         <div class="report-head">
@@ -176,7 +185,13 @@
         </div>
         <form>
             <div class="report-type">
-                <input type="text" placeholder="请选择举报类型" disabled>
+                <input id="report-select" type="text" placeholder="请选择举报类型" readonly>
+                <ul id="report-select-options" style="display: none;">
+                    <li>盗版侵权</li>
+                    <li>涉黄涉暴</li>
+                    <li>文件损坏</li>
+                    <li>其他</li>
+                </ul>
                 <i class="iconfont">&#xe690;</i>
                 <span>*</span>
             </div>
@@ -192,14 +207,65 @@
         </form>
     </div>
     <!-- 页面底部 -->
-    <div class="footer mt80" style="width: 100%; position: fixed; bottom: 0;">
-        <div class="copyright-space"></div>
-        <div class="copyright contain font12 mt12">
-            <p>图行天下图库图片内容由用户免费分享产生，若发现您的权利被侵害，请联系photophoto.cn@163.com，我们尽快处理</p>
-            <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 网站统计 站长统计</p>
+    <div class="footer-common">
+        <div class="contain">
+            <div class="mt30 clearfix">
+                <div class="footer-common-link">
+                    <div class="link-list">
+                        <ul>
+                            <li><a href="">关于我们</a></li>
+                            <li><a href="">联系我们</a></li>
+                            <li><a href="">常见问题</a></li>
+                            <li><a href="">版权说明</a></li>
+                            <li><a href="vip-purchase.html">成为VIP</a></li>
+                            <li><a href="">签约设计师</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>图行天下图库图片内容由用户免费分享产生，若发现您的权利被侵害，请联系photophoto.cn@163.com，我们尽快处理</p>
+                <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 <a target="_blank" href="https://www.51.la/?comId=20789521">网站统计</a> <a target="_blank" href="https://www.cnzz.com/stat/website.php?web_id=1262691885">站长统计</a></p>
+            </div>
         </div>
     </div>
-    <script src="../js/jquery.min.js"></script>
+    <!-- 右下角固定导航 -->
+    <div class="bottom-nav clearfix">
+        <div class="icon-list fl">
+            <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=2169207279&site=qq&menu=yes">
+                <div class="icon-list-item icon-list-item2 bb">
+                    <div class="detail">在线客服</div>
+                </div>
+            </a>
+            <a href="#top">
+                <div class="icon-list-item icon-list-item4">
+                    <div class="detail">回到顶部</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="./../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
+    <script>
+        var USER_DATA = {
+            vip_type: 'free', // vip类型
+            downloads: 1, // 用户今日剩余下载次数
+            downloadState: 0 // 用户下载当前素材次数
+        }
+        if (USER_DATA.vip_type == 'free') {
+            if (!USER_DATA.downloads) {
+                $('#xiazai-default').hide();
+                $('#free-useup').show();
+            }
+        }
+        
+        function handleDownload() {
+            // 下载动作
+            USER_DATA.downloadState += 1
+            $('#xiazai-default').hide();
+            $('#free-useup').hide();
+            $('#isdownload').show();
+        }
+    </script>
 </body>
 </html>
