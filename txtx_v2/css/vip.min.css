@@ -1,0 +1,98 @@
+.vip-contain { width: 100%; background-image: url(../imgs/beijing-vip.png); background-position: center top; background-repeat: no-repeat; padding-top: 350px; }
+
+.vip-contain .vip-items { width: 830px; position: relative; margin: 30px auto; }
+
+.vip-contain .vip-items .vip-box { background: #ffffff; border-radius: 4px; box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.15); text-align: center; }
+
+.vip-contain .vip-items .vip-box h1 { font-size: 18px; font-weight: 700; padding-top: 20px; }
+
+.vip-contain .vip-items .vip-box .vip-icon { display: inline-block; height: 40px; width: 40px; overflow: hidden; background-image: url(//js.photophoto.cn/web/v1/imgs/vip-png.png); background-repeat: no-repeat; }
+
+.vip-contain .vip-items .vip-box-price { text-align: left; text-indent: 46px; }
+
+.vip-contain .vip-items .vip-box-price .through { font-size: 14px; text-decoration: line-through; color: #999; }
+
+.vip-contain .vip-items .vip-box-price > span { text-decoration: none; color: #ff6600; font-size: 38px; }
+
+.vip-contain .vip-items .vip-box-price > span span { font-size: 14px; }
+
+.vip-contain .vip-items .vip-box .svip-box-price { text-indent: 33px; }
+
+.vip-contain .vip-items .vip-box .svip-box-price .through { font-size: 14px; text-decoration: line-through; color: #999; }
+
+.vip-contain .vip-items .vip-box .svip-box-price > span { color: #E02E2E; font-size: 44px; }
+
+.vip-contain .vip-items .vip-box-perprice { display: inline-block; width: 175px; height: 26px; line-height: 26px; font-size: 12px; background: #e0f6e9; border: 1px solid #78dc90; border-radius: 4px; }
+
+.vip-contain .vip-items .vip-box-perprice span { color: #24C761; }
+
+.vip-contain .vip-items .vip-box-desc { text-align: left; text-indent: 64px; color: #666; font-size: 14px; line-height: 28px; }
+
+.vip-contain .vip-items .vip-box-desc .iconfont { color: #17DF6A; }
+
+.vip-contain .vip-items .vip-box-btn { display: inline-block; width: 130px; height: 36px; background: linear-gradient(to right, #ff8904 0%, #fc5653 33%, #fc3237 66%, #e60017 100%); border-radius: 18px; color: #fff; line-height: 36px; font-size: 14px; cursor: pointer; }
+
+.vip-contain .vip-items .vip-base { height: 310px; width: 279px; }
+
+.vip-contain .vip-items .vip-svip { height: 370px; width: 286px; overflow: hidden; position: absolute; left: 50%; top: -30px; margin-left: -138px; }
+
+.vip-contain .vip-items .vip-svip-border { height: 6px; background: linear-gradient(to right, #ff8904 0%, #fc5653 33%, #fc3237 66%, #e60017 100%); }
+
+.vip-contain .vip-items .vip-free { height: 250px; width: 269px; margin-top: 30px; }
+
+.vip-contain .vip-items .vip-free p { font-size: 14px; color: #999; line-height: 32px; }
+
+.vip-contain .privilege { margin-top: 120px; }
+
+.vip-contain .privilege h1 { text-align: center; font-size: 30px; font-weight: 500; }
+
+.vip-contain .privilege table { margin: 30px auto; background-color: #fff; border-radius: 4px; box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.15); text-align: center; }
+
+.vip-contain .privilege table tr th { width: 230px; line-height: 60px; font-size: 22px; font-weight: 300; }
+
+.vip-contain .privilege table tr td { height: 50px; line-height: 50px; font-size: 14px; color: #666; }
+
+.vip-contain .privilege table tr td .b3 { color: #b3b3b3; }
+
+.vip-contain .privilege table tr td .green { color: #17DF6A; }
+
+.vip-contain .privilege table tr td .vip-icon-box { display: inline-block; width: 22px; height: 20px; position: relative; }
+
+.vip-contain .privilege table tr td .vip-icon-box .vip-icon { width: 22px; height: 20px; position: absolute; top: 5px; left: 0; background-image: url(//js.photophoto.cn/web/v1/imgs/vip-png.png); background-repeat: no-repeat; }
+
+.vip-contain .privilege table tr .title { font-size: 16px; color: #333; }
+
+.vip-contain .privilege table .price td { height: 130px; font-size: 14px; color: #999; }
+
+.vip-contain .privilege table .price td span { font-size: 38px; font-weight: 300; }
+
+.vip-contain .privilege table .price td .button { display: inline-block; width: 128px; height: 34px; line-height: 34px; border-radius: 4px; color: #fff; margin-top: 10px; cursor: pointer; }
+
+.vip-contain .privilege table .price .vip span { color: #ff6600; }
+
+.vip-contain .privilege table .price .vip .button { background-color: #ff6600; border: 1px solid #ff6600; }
+
+.vip-contain .privilege table .price .vip .button:hover { background-color: #fff; color: #ff6600; }
+
+.vip-contain .privilege table .price .svip span { color: #E02E2E; }
+
+.vip-contain .privilege table .price .svip .button { background-color: #E02E2E; border: 1px solid #E02E2E; }
+
+.vip-contain .privilege table .price .svip .button:hover { background-color: #fff; color: #E02E2E; }
+
+.vip-contain .purpose { margin-top: 72px; }
+
+.vip-contain .purpose h1 { text-align: center; font-size: 30px; font-weight: 500; }
+
+.vip-contain .purpose table { margin: 30px auto; background-color: #fff; border-radius: 4px; box-shadow: 0px 2px 6px 1px rgba(0, 0, 0, 0.15); text-align: center; }
+
+.vip-contain .purpose table tr th { color: #fff; background-color: #2e3139; line-height: 60px; font-size: 22px; width: 153px; font-weight: 300; }
+
+.vip-contain .purpose table tr td { font-size: 14px; color: #666; }
+
+.vip-contain .purpose table tr .compare { width: 400px; }
+
+.vip-contain .purpose table tr .compare-item { text-align: left; padding: 15px 30px; color: #333; line-height: 22px; }
+
+.vip-contain .purpose table .transparent { background-color: #f2f6f7; }
+/*# sourceMappingURL=vip.min.css.map */

@@ -1,0 +1,96 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.provide-text {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.provide-title {
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.main-content {
+    width: 860px;
+    margin: 40px auto;
+}
+
+.main-content .box {
+    height: 340px;
+    width: 230px;
+    padding: 40px 50px;
+    background-color: rgba(255, 255, 255, .85);
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 1px rgba(0,0,0,0.25);
+    text-align: center;
+}
+.main-content .box p{
+    color: #666;
+    font-size: 14px;
+    line-height: 32px;
+}
+.main-content .box .iconfont {
+    font-size: 44px;
+    color: #999;
+}
+.main-content .box h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+    line-height: 64px;
+}
+.main-content .box .box-btn {
+    display: inline-block;
+    width: 230px;
+    color: #fff;
+    text-align: center;
+    height: 42px;
+    line-height: 42px;
+    margin-top: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.box-btn-sign {
+    background-color: #e02e2e;
+    border: 1px solid #e02e2e;
+}
+.main-content .sign-box .box-btn-sign:hover {
+    color: #e02e2e;
+    background-color: #fff;
+}
+.box-btn-design {
+    background-color: #ff6600;
+    border: 1px solid #ff6600;
+}
+.main-content .design-box .box-btn-design:hover {
+    color: #ff6600;
+    background-color: #fff;
+}
+.foot {
+    flex: 1;
+    background: url(../imgs/provide-bg.png) 100% no-repeat;
+    position: relative;
+}
+
+.foot-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 10px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 26px;
+}
