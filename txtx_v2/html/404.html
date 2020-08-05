@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/txtx.css">
     <link rel="stylesheet" href="../css/common.min.css">
     <link rel="stylesheet" href="../css/iconfont/iconfont.css">
-    <link rel="stylesheet" href="../css//vip-purchase.min.css">
 </head>
 
 <body>
@@ -86,8 +85,26 @@
                                 <div class="user-info-userid">ID:51954321</div>
                                 <div class="user-info-divider"></div>
                                 <div class="user-info-btn">
+                                    <a href="svip-purchase.html">
+                                        <div class="to-vip">升级VIP</div>
+                                    </a>
+                                </div>
+                                <div class="user-info-btn">
                                     <a href="vip-purchase.html">
                                         <div class="to-vip">开通VIP</div>
+                                    </a>
+                                </div>
+                                <div class="user-info-btn user-info-vipxufei">
+                                    <a href="vip-purchase.html">
+                                        <div class="to-vip">续费VIP</div>
+                                    </a>
+                                </div>
+                                <div class="user-info-vipqixian clearfix">
+                                    <a href="svip-purchase.html">
+                                        <div class="to-btn to-vip fl">升级VIP</div>
+                                    </a>
+                                    <a href="vip-purchase.html">
+                                        <div class="to-btn to-vipxufei fr">续费VIP</div>
                                     </a>
                                 </div>
                                 <div class="user-info-divider"></div>
@@ -116,6 +133,11 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="error-content">
+        <img src="//js.photophoto.cn/web/v1/imgs/404.png">
+        <p>抱歉，您访问的网页不存在或暂时不可用</p>
+        <p><a href="../index.html">返回首页>></a></a></a></p>
     </div>
     <!-- 登录注册 -->
     <div id="login-box" class="erweima pop-main">
@@ -152,136 +174,6 @@
             </div>
         </div>
     </div>
-    <div id="mask"></div>
-    <!-- 支付content -->
-    <div class="purchase">
-        <div class="purchase-tab clearfix">
-            <div class="purchase-tab-option active">
-                <div class="option">
-                    基础VIP <div class="vip-icon-box"><span class="vip-icon vip-icon-vip"></span></div>
-                    <div class="bb"></div>
-                </div>
-            </div>
-            <div class="purchase-tab-option">
-                <div class="option">
-                    <a href="svip-purchase.html">超级VIP</a>
-                    <div class="vip-icon-box"><span class="vip-icon vip-icon-svip"></span></div>
-                    <div class="bb"></div>
-                </div>
-            </div>
-        </div>
-        <div class="purchase-type">
-            <div class="purchase-type-box purchase-vip">
-                <div class="clearfix">
-                    <div class="purchase-item">
-                        <div class="purchase-item-main">
-                            <span class="text-main"><span>29</span> 元</span> <span class="text">69元</span>
-                            <div class="desc-main"></div>
-                        </div>
-                        <div class="purchase-item-time mt10">1个月</div>
-                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
-                    </div>
-                    <div class="purchase-item">
-                        <div class="purchase-item-main">
-                            <span class="text-main"><span>39</span> 元</span> <span class="text">99元</span>
-                            <div class="desc-main">低至0.43元一天</div>
-                        </div>
-                        <div class="purchase-item-time mt10">3个月</div>
-                        <div class="tag-text">买二送一</div>
-                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
-                    </div>
-                    <div class="purchase-item">
-                        <div class="purchase-item-main">
-                            <span class="text-main"><span>69</span> 元</span> <span class="text">139元</span>
-                            <div class="desc-main">低至0.28元一天</div>
-                        </div>
-                        <div class="purchase-item-time mt10">12个月</div>
-                        <div class="tag-text">性价比首选</div>
-                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
-                    </div>
-                    <div class="purchase-item">
-                        <div class="purchase-item-main">
-                            <span class="text-main"><span>139</span> 元</span> <span class="text">299元</span>
-                            <div class="desc-main">全站素材海量下载</div>
-                        </div>
-                        <div class="purchase-item-time mt10">终身</div>
-                        <div class="tag-text">限时7.26-8.12</div>
-                        <div class="tag-icon"><i class="iconfont">&#xe609;</i></div>
-                    </div>
-                </div>
-                <h2>支付方式</h2>
-                <div class="purchase-main">
-                    <a href="">
-                        <p class="mention">支付即同意《VIP会员服务协议》</p>
-                    </a>
-                    <p>应付金额： <span>99</span> 元</p>
-                    <div class="code clearfix">
-                        <div class="code-box code-wx fl">
-                            <div id="erweima-box" class="code-box-qrcode code-box-unlogin">
-                                <div id="qrcode-img">
-                                    <img src="//js.photophoto.cn/web/v1/imgs/erweima_bg.png">
-                                </div>
-                                <!-- <canvas id="qrcode-saomiao" width="178" height="178" style="display: none;"></canvas> -->
-                                <div class="qrcode-mask" style="display: none;">
-                                    <p><a>点击登录</a></p>
-                                </div>
-                            </div>
-                            <div class="code-box-title mt10">
-                                <i class="iconfont">&#xe626;</i> 使用微信扫码支付
-                            </div>
-                        </div>
-                        <div class="code-box code-zfb fr">
-                            <a>
-                                <div class="code-box-zhifubao tozhifubao"></div>
-                            </a>
-                            <a>
-                                <div class="code-box-title tozhifubao mt10">
-                                    <i class="iconfont">&#xe627;</i> 使用支付宝扫码支付
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="notice">
-            <p>温馨提示</p>
-            <p>1、促销价格的商品暂不支持退款服务</p>
-            <p>2、请合理使用下载帐号，若短时间内高频或大量非法下载可能会被系统封禁</p>
-            <p>3、下载速度与用户自身网速相关</p>
-            <p>4、更多问题请咨询在线客服</p>
-        </div>
-        <!-- 支付成功弹窗 -->
-        <div class="success" style="display: none;">
-            <i class="iconfont">&#xe607;</i>
-            <div class="success-head">
-                支付成功
-            </div>
-            <img src="//js.photophoto.cn/web/v1/imgs/logo-purchase.png">
-            <h4>支付成功</h4>
-            <p>您的<span>超级VIP</span>有效期至2020-08-31 12：30：26</p>
-        </div>
-    </div>
-    <script src="../js/footer.js"></script>
-    <script src="//js.photophoto.cn/web/v1/js/plugins/jquery.qrcode.min.js"></script>
-    <script>
-        var ZHIFU_DATA = {
-            vip_id: 'svip', // 选中的vip类编号
-            pay_type: null, // 支付编号
-            click_type: null, // 统计来源
-            erweima_URL: 'http://127.0.0.1:1234/vip/pay', // 二维码生成api
-            zhifubao_URL: '/vip/pay.html', // 支付宝链接api
-            wxlunxun_URL: '/notify/status' // 微信支付成功轮询api
-        }
-        var store = {
-            // 当前微信订单号
-            'wxOrderId': 0,
-            // 定时查询器
-            'timer': 0,
-            // 定时开始时间: 时间戳，毫秒数
-            'startAt': 0
-        };
-    </script>
     <!-- 页面底部 -->
     <div class="footer-common">
         <div class="contain">
@@ -301,29 +193,14 @@
             </div>
             <div class="copyright">
                 <p>图行天下图库图片内容由用户免费分享产生，若发现您的权利被侵害，请联系photophoto.cn@163.com，我们尽快处理</p>
-                <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 <a target="_blank" href="https://www.51.la/?comId=20789521">网站统计</a> <a target="_blank" href="https://www.cnzz.com/stat/website.php?web_id=1262691885">站长统计</a></p>
+                <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 <a target="_blank"
+                        href="https://www.51.la/?comId=20789521">网站统计</a> <a target="_blank"
+                        href="https://www.cnzz.com/stat/website.php?web_id=1262691885">站长统计</a></p>
             </div>
         </div>
     </div>
-    <!-- 右下角固定导航 -->
-    <div class="bottom-nav clearfix">
-        <div class="icon-list fl">
-            <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=2169207279&site=qq&menu=yes">
-                <div class="icon-list-item icon-list-item2 bb">
-                    <div class="detail">在线客服</div>
-                </div>
-            </a>
-            <a href="#top">
-                <div class="icon-list-item icon-list-item4">
-                    <div class="detail">回到顶部</div>
-                </div>
-            </a>
-        </div>
-    </div>
-    
-    <script src="./../js/jquery.min.js"></script>
-    <script src="./../js/common.js"></script>
-    <script src="./../js/vip-purchase.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 
 </html>

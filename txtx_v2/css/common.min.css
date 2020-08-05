@@ -53,7 +53,7 @@
 
 .header-content-user .header-touxiang .header-touxiang-sanjiao { position: absolute; bottom: 3px; right: 14px; z-index: 1002; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 8px solid #e02e2e; }
 
-.header-content-user .header-touxiang .header-user-box { position: absolute; z-index: 1002; width: 260px; height: 400px; padding: 40px 0 20px; background-color: #fff; top: 65px; right: -110px; border-radius: 0px 0px 4px 4px; box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25); border-top: 3px solid #e02e2e; }
+.header-content-user .header-touxiang .header-user-box { position: absolute; z-index: 1002; width: 260px; padding: 40px 0 20px; background-color: #fff; top: 65px; right: -110px; border-radius: 0px 0px 4px 4px; box-shadow: 0px 3px 8px 2px rgba(0, 0, 0, 0.25); border-top: 3px solid #e02e2e; }
 
 @media screen and (max-width: 1500px) and (min-width: 1005px) { .header-content-user .header-touxiang .header-user-box { position: fixed; right: 0; } }
 
@@ -77,9 +77,25 @@
 
 .header-content-user .header-touxiang .header-user-box .user-info-btn { margin-top: 15px; text-align: center; line-height: 32px; }
 
-.header-content-user .header-touxiang .header-user-box .user-info-btn .to-vip { font-size: 14px; display: inline-block; height: 32px; width: 125px; text-align: center; color: #fff; border: 1px solid #e33939; opacity: 0.92; background: linear-gradient(#e33939 0%, #e02d2d 33%, #e02222 66%, #e00b0b 100%); border-radius: 17px; cursor: pointer; }
+.header-content-user .header-touxiang .header-user-box .user-info-btn .to-vip { font-size: 14px; display: inline-block; height: 32px; width: 125px; text-align: center; color: #fff; border: 1px solid #e33939; opacity: 0.92; background: linear-gradient(45deg, #e33939 0%, #e02d2d 33%, #e02222 66%, #e00b0b 100%); border-radius: 17px; cursor: pointer; }
 
 .header-content-user .header-touxiang .header-user-box .user-info-btn .to-vip:hover { background: #fff; color: #e33939; }
+
+.header-content-user .header-touxiang .header-user-box .user-info .user-info-vipxufei .to-vip { border: 1px solid #ff6600; background: linear-gradient(45deg, #ff8c40 0%, #fa8232 33%, #f26f18 66%, #f26100 100%); }
+
+.header-content-user .header-touxiang .header-user-box .user-info .user-info-vipxufei .to-vip:hover { background: #fff; color: #ff6600; }
+
+.header-content-user .header-touxiang .header-user-box .user-info-vipqixian { margin-top: 15px; line-height: 32px; padding: 0 20px; }
+
+.header-content-user .header-touxiang .header-user-box .user-info-vipqixian .to-btn { width: 90px; height: 32px; text-align: center; opacity: 0.92; border-radius: 17px; font-size: 14px; color: #fff; }
+
+.header-content-user .header-touxiang .header-user-box .user-info-vipqixian .to-vip { border: 1px solid #e00b0b; background: linear-gradient(45deg, #ff4040 0%, #f03030 33%, #e62222 66%, #e00b0b 100%); }
+
+.header-content-user .header-touxiang .header-user-box .user-info-vipqixian .to-vip:hover { background: #fff; color: #e00b0b; }
+
+.header-content-user .header-touxiang .header-user-box .user-info-vipqixian .to-vipxufei { border: 1px solid #f26100; background: linear-gradient(45deg, #ff8c40 0%, #fa8232 33%, #f26f18 66%, #f26100 100%); }
+
+.header-content-user .header-touxiang .header-user-box .user-info-vipqixian .to-vipxufei:hover { background: #fff; color: #f26100; }
 
 .header-content-user .header-touxiang .header-user-box .user-info-menu li { line-height: 42px; height: 42px; font-size: 14px; text-indent: 20px; color: #4D4D4D; }
 
@@ -298,7 +314,7 @@
 
 .vip-download-banner { height: 100px; background: url(../imgs/vip-download1920.png) center center no-repeat; }
 
-.pop-main { position: fixed; top: 50%; left: 50%; background-color: #fff; z-index: 1002; }
+.pop-main { position: fixed; top: 50%; left: 50%; background-color: #fff; border-radius: 4px; z-index: 1002; }
 
 .pop-main .close-icon { position: absolute; right: 10px; top: 10px; color: #999999; font-size: 12px; cursor: pointer; }
 
@@ -539,6 +555,16 @@
 .bottom-nav .icon-list-item3 { background: #f2f6f7 url(//js.photophoto.cn/web/v1/imgs/qianbao.png) center center no-repeat; }
 
 .bottom-nav .icon-list-item4 { background: #f2f6f7 url(//js.photophoto.cn/web/v1/imgs/ziyuan.png) center center no-repeat; }
+
+.error-content { text-align: center; }
+
+.error-content img { display: block; width: 560px; height: 376px; margin: 90px auto 0; }
+
+.error-content p { font-family: 'Source Han Sans CN Regular, Source Han Sans CN Regular-Regular'; font-size: 20px; font-weight: 400; letter-spacing: 1px; margin-top: 30px; }
+
+.error-content p a { color: #e02e2e; font-size: 16px; }
+
+.error-content p a:hover { text-decoration: underline; }
 
 #login-box { width: 400px; height: 470px; background: #ffffff; border: 1px solid #ffffff; border-radius: 4px; top: 50%; left: 50%; margin-left: -200px; margin-top: -235px; padding: 40px; position: fixed; z-index: 1002; box-sizing: border-box; display: none; }
 

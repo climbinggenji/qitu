@@ -160,7 +160,7 @@
         <div class="user-menu fl">
             <ul>
                 <a>
-                    <li class="active"><i class="iconfont">&#xe611;</i> <span>个人中心</span></li>
+                    <li class="active"><i class="iconfont">&#xe611;</i> <span>首页</span></li>
                 </a>
                 <a href="wodexiazai.html">
                     <li><i class="iconfont">&#xe61b;</i> <span>下载记录</span></li>
@@ -188,24 +188,21 @@
                 <div class="user-info clearfix">
                     <div class="touxiang">
                         <img src="//js.photophoto.cn/web/v1/imgs/touxiang.png">
-                        <div class="touxiang-mask">上传头像</div>
                     </div>
                     <div class="user-info-box fl ml20">
                         <div class="user-name">图行天下用户abc <a href="jibenziliao.html"><i class="iconfont">&#xe61e;</i></a>
                         </div>
                         <div class="user-id">用户ID：86108973210</div>
-                        <div class="user-score">积分：<span>860</span></div>
-                        <div class="user-wallet">账户余额：<span>168.0</span> 元 <button>提现</button></div>
                     </div>
-                    <div class="user-info-vip vip-box fl">
-                        <div class="vip-logo"></div>
-                        <div class="vip-name font14">基础VIP</div>
-                        <div class="vip-time font12">有效期至2020-07-05 15:32:15</div>
-                    </div>
-                    <div class="user-info-svip vip-box fl">
+                    <div class="user-info-svip vip-box fr">
                         <div class="vip-logo logo-svip-large"></div>
                         <div class="vip-name font14">超级VIP</div>
                         <div class="vip-opening font12">尚未开通 <a href="../vip.html">首次开通仅需9.9元</a></div>
+                    </div>
+                    <div class="user-info-vip vip-box fr">
+                        <div class="vip-logo"></div>
+                        <div class="vip-name font14">基础VIP</div>
+                        <div class="vip-time font12">有效期至2020-07-05 <a href="../vip-purchase.html">续费</a></div>
                     </div>
                 </div>
                 <div class="user-privilege clearfix">
@@ -226,7 +223,7 @@
                                 <div class="security-title">已绑定手机号（183****0516）</div>
                                 <div class="security-desc">绑定后即可用于账号安全，短信接收相关服务</div>
                             </div>
-                            <button class="security-item-btn">修改手机</button>
+                            <button id="bind-phone" class="security-item-btn">修改手机</button>
                         </div>
                         <div class="security-item clearfix fr">
                             <i class="iconfont">&#xe625;</i>
@@ -234,47 +231,7 @@
                                 <div class="security-title">尚未绑定邮箱</div>
                                 <div class="security-desc">可用于接收最新活动消息</div>
                             </div>
-                            <button class="security-item-btn">绑定邮箱</button>
-                        </div>
-                        <div class="security-item clearfix fl">
-                            <i class="iconfont">&#xe616;</i>
-                            <div class="security-item-info">
-                                <div class="security-title">身份认证</div>
-                                <div class="security-desc">认证后可向本站供图并提现收益</div>
-                            </div>
-                            <button class="security-item-btn">绑定身份证</button>
-                        </div>
-                        <div class="security-item clearfix fr">
-                            <i class="iconfont">&#xe61d;</i>
-                            <div class="security-item-info">
-                                <div class="security-title">银行卡绑定</div>
-                                <div class="security-desc">绑定后方便提现收益</div>
-                            </div>
-                            <button class="security-item-btn">绑定银行卡</button>
-                        </div>
-                        <div class="security-item clearfix fl">
-                            <i class="iconfont">&#xe61f;</i>
-                            <div class="security-item-info">
-                                <div class="security-title">微信支付绑定</div>
-                                <div class="security-desc">绑定后方便提现收益</div>
-                            </div>
-                            <button class="security-item-btn">绑定微信</button>
-                        </div>
-                        <div class="security-item clearfix fr">
-                            <i class="iconfont">&#xe624;</i>
-                            <div class="security-item-info">
-                                <div class="security-title">绑定支付宝</div>
-                                <div class="security-desc">绑定后方便提现收益</div>
-                            </div>
-                            <button class="security-item-btn">绑定支付宝</button>
-                        </div>
-                        <div class="security-item clearfix fl">
-                            <i class="iconfont">&#xe623;</i>
-                            <div class="security-item-info">
-                                <div class="security-title">支付密码设置</div>
-                                <div class="security-desc">绑定后方便提现收益</div>
-                            </div>
-                            <button class="security-item-btn">设置密码</button>
+                            <button id="bind-email" class="security-item-btn">绑定邮箱</button>
                         </div>
                     </div>
                 </div>
@@ -286,17 +243,32 @@
                             <div class="security-title">Leon1993</div>
                             <div class="security-desc">绑定微信账号即可快捷登录</div>
                         </div>
-                        <button class="security-item-btn">解绑</button>
+                        <button id="bind-weixin" class="security-item-btn">解绑</button>
                     </div>
                     <div class="security-item clearfix fr">
                         <i class="iconfont" style="color: #07A9FA;">&#xe614;</i>
                         <div class="security-item-info">
                             <div class="security-title">朝阳梁朝伟</div>
-                            <div class="security-desc">绑定QQ账号即可快捷登录</div>
+                            <div id="bing-qq" class="security-desc">绑定QQ账号即可快捷登录</div>
                         </div>
                         <button class="security-item-btn">解绑</button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- 弹窗 -->
+    <div id="change-phone" class="pop-main" style="display: none;">
+        <i class="iconfont close-icon">&#xe607;</i>
+        <div class="title">绑定新手机号</div>
+        <div class="content">
+            <div class="content-head">
+                <span class="user-phone">需要验证手机号 189****0627</span><span class="mention">若手机遗失请 <a target="_blank" href="https://wpa.qq.com/msgrd?v=3&uin=2169207279&site=qq&menu=yes">联系客服</a></span>
+            </div>
+            <!-- 人机验证 -->
+            <div class="content-yanzhengma mt20">
+                <input type="text" placeholder="验证码">
+                <div class="content-yanzhengma-send">发送验证码</div>
             </div>
         </div>
     </div>
@@ -339,6 +311,20 @@
         </div>
     </div>
     <script src="../../js/user.js"></script>
+    <script>
+        var USER_DATA = {
+            phone: '186****0516',
+            email: '',
+            weixin: 'Leon1993',
+            qq: '1234567'
+        }
+        $('#bind-phone').on('click', function() {
+            if (USER_DATA.phone) {
+                $('#change-phone').show();
+                $('#mask').show();
+            }
+        })
+    </script>
 </body>
 
 </html>

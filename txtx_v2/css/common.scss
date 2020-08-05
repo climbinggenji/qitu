@@ -196,7 +196,6 @@
                     position: absolute;
                     z-index: 1002;
                     width: 260px;
-                    height: 400px;
                     padding: 40px 0 20px;
                     background-color: #fff;
                     top: 65px;
@@ -279,13 +278,55 @@
                                 color: #fff;
                                 border: 1px solid #e33939;
                                 opacity: 0.92;
-                                background: linear-gradient(#e33939 0%, #e02d2d 33%, #e02222 66%, #e00b0b 100%);
+                                background: linear-gradient(45deg,#e33939 0%, #e02d2d 33%, #e02222 66%, #e00b0b 100%);
                                 border-radius: 17px;
                                 cursor: pointer;
 
                                 &:hover {
                                     background: #fff;
                                     color: #e33939;
+                                }
+                            }
+                        }
+
+                        .user-info-vipxufei {
+                            .to-vip {
+                                border: 1px solid #ff6600;
+                                background: linear-gradient(45deg, #ff8c40 0%, #fa8232 33%, #f26f18 66%, #f26100 100%);
+                                &:hover {
+                                    background: #fff;
+                                    color: #ff6600;
+                                }
+                            }
+                        }
+
+                        &-vipqixian {
+                            margin-top: 15px;
+                            line-height: 32px;
+                            padding: 0 20px;
+                            .to-btn {
+                                width: 90px;
+                                height: 32px;
+                                text-align: center;
+                                opacity: 0.92;
+                                border-radius: 17px;
+                                font-size: 14px;
+                                color: #fff;
+                            }
+                            .to-vip {
+                                border: 1px solid #e00b0b;
+                                background: linear-gradient(45deg, #ff4040 0%, #f03030 33%, #e62222 66%, #e00b0b 100%);
+                                &:hover {
+                                    background: #fff;
+                                    color: #e00b0b;
+                                }
+                            }
+                            .to-vipxufei {
+                                border: 1px solid #f26100;
+                                background: linear-gradient(45deg, #ff8c40 0%, #fa8232 33%, #f26f18 66%, #f26100 100%);
+                                &:hover {
+                                    background: #fff;
+                                    color: #f26100;
                                 }
                             }
                         }
@@ -995,6 +1036,7 @@
     top: 50%;
     left: 50%;
     background-color: #fff;
+    border-radius: 4px;
     z-index: 1002;
     .close-icon {
         position: absolute;
@@ -1775,6 +1817,31 @@
 
         &-item4 {
             background: #f2f6f7 url(//js.photophoto.cn/web/v1/imgs/ziyuan.png) center center no-repeat;
+        }
+    }
+}
+
+// 404
+.error-content {
+    text-align: center;
+    img {
+        display: block;
+        width: 560px;
+        height: 376px;
+        margin: 90px auto 0;
+    }
+    p {
+        font-family: 'Source Han Sans CN Regular, Source Han Sans CN Regular-Regular';
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        a {
+            color: #e02e2e;
+            font-size: 16px;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

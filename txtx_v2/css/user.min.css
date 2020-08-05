@@ -1,4 +1,6 @@
 @charset "UTF-8";
+html { overflow-y: scroll; }
+
 .user { letter-spacing: 1px; width: 1258px; margin: 30px auto; }
 
 .user-menu { width: 200px; padding: 24px 0; background: #ffffff; border-radius: 4px; }
@@ -37,7 +39,7 @@
 
 .user .main-content .main-title span { font-size: 18px; font-family: Microsoft YaHei Bold, Microsoft YaHei Bold-Bold; font-weight: 700; position: relative; left: 4px; bottom: -7px; }
 
-.user .main-content .user-content .user-info .touxiang { float: left; height: 100px; width: 100px; border-radius: 50%; overflow: hidden; position: relative; cursor: pointer; }
+.user .main-content .user-content .user-info .touxiang { float: left; height: 100px; width: 100px; border-radius: 50%; overflow: hidden; position: relative; }
 
 .user .main-content .user-content .user-info .touxiang img { height: 100%; width: 100%; }
 
@@ -63,13 +65,17 @@
 
 .user .main-content .user-content .user-info-box .user-wallet button:hover { border: 1px solid #e02e2e; color: #e02e2e; }
 
-.user .main-content .user-content .user-info .vip-box { padding-top: 30px; position: relative; }
+.user .main-content .user-content .user-info .vip-box { padding-top: 30px; margin-right: 30px; position: relative; }
 
 .user .main-content .user-content .user-info .vip-box .vip-logo { height: 40px; width: 40px; position: absolute; left: 0; top: 30px; overflow: hidden; background-image: url(//js.photophoto.cn/web/v1/imgs/vip-png.png); background-repeat: no-repeat; }
 
 .user .main-content .user-content .user-info .vip-box .vip-name { font-weight: 700; text-indent: 50px; }
 
 .user .main-content .user-content .user-info .vip-box .vip-time { color: #999999; margin-top: 5px; text-indent: 50px; }
+
+.user .main-content .user-content .user-info .vip-box .vip-time a { color: #e02e2e; }
+
+.user .main-content .user-content .user-info .vip-box .vip-time a:hover { text-decoration: underline; }
 
 .user .main-content .user-content .user-info .vip-box .vip-opening { color: #999999; margin-top: 5px; text-indent: 50px; }
 
@@ -322,4 +328,26 @@
 .step-box .active { width: 40px; height: 40px; font-size: 18px; line-height: 40px; background-color: #e02e2e; top: -7px; }
 
 .step-box .active span { left: -8px; color: #333; }
+
+#change-phone { width: 450px; margin-top: -150px; margin-left: -225px; }
+
+#change-phone .title { font-size: 14px; height: 40px; line-height: 40px; border-bottom: 1px solid #EDEFF5; text-indent: 20px; }
+
+#change-phone .content { height: 199px; padding: 30px 52px; }
+
+#change-phone .content-head { text-align: center; }
+
+#change-phone .content-head .user-phone { font-size: 14px; font-weight: 700; }
+
+#change-phone .content-head .mention { margin-left: 12px; font-size: 12px; color: #999; }
+
+#change-phone .content-head .mention a { color: #FF6600; }
+
+#change-phone .content-head .mention a:hover { text-decoration: underline; }
+
+#change-phone .content-yanzhengma input { width: 251px; float: left; height: 36px; line-height: 36px; border: 1px solid #edeff5; border-right: none; border-radius: 4px 0 0 4px; font-size: 14px; text-indent: 10px; }
+
+#change-phone .content-yanzhengma-send { float: left; width: 92px; height: 36px; line-height: 36px; color: #fff; background: #e02e2e; border: 1px solid #e02e2e; border-radius: 0px 4px 4px 0px; text-align: center; font-size: 14px; }
+
+#change-phone .content-yanzhengma-send:hover { background: #fff; color: #e02e2e; }
 /*# sourceMappingURL=user.min.css.map */
