@@ -94,6 +94,7 @@ body {
     background-color: #f2f6f7;
     font-weight: 400;
     position: relative;
+    min-width: 1002px;
 }
 
 a:hover {

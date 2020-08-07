@@ -11,20 +11,21 @@ function getRequest() {
     }
     return theRequest;
 }
-if (window.location.search) {
-    request = getRequest();
-    if (request.click_type) {
-        ZHIFU_DATA.click_type = request.click_type;
+
+function initSelect() {
+    if (window.location.search) {
+        request = getRequest();
+        if (request.click_type) {
+            ZHIFU_DATA.click_type = request.click_type;
+        }
+        $('.purchase-item:eq(' + (request.check - 1) + ')').addClass('active');
+       ZHIFU_DATA.vip_id = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').attr('attr-id');
+        refeshLink(ZHIFU_DATA.erweima_URL);
+    } else {
+        $('.purchase-item:eq(2)').addClass('active');
+        ZHIFU_DATA.vip_id = $('.purchase-item:eq(2)').find('.text').attr('attr-id');
+        refeshLink(ZHIFU_DATA.erweima_URL);
     }
-    $('.purchase-item:eq(' + (request.check - 1) + ')').addClass('active');
-   ZHIFU_DATA.pay_type = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').text();
-//    ZHIFU_DATA.vip_id = $('.purchase-item:eq(' + (request.check - 1) + ')').find('.text').attr('attr-id');
-    refeshLink(ZHIFU_DATA.erweima_URL);
-} else {
-    $('.purchase-item:eq(2)').addClass('active');
-    ZHIFU_DATA.pay_type = $('.purchase-item:eq(2)').find('.text').text();
-    // ZHIFU_DATA.vip_id = $('.purchase-item:eq(2)').find('.text').attr('attr-id');
-    refeshLink(ZHIFU_DATA.erweima_URL);
 }
 
 // 微信二维码请求过度动画
@@ -72,6 +73,8 @@ $('.purchase-item').on('click', function () {
 
 // 支付链接
 function zhifubaoLink(url, params, target) {
+    zfb_state = 1;
+    console.log('test');
     var tempform = document.createElement('form');
     tempform.action = url;
     tempform.method = 'post';
@@ -93,12 +96,16 @@ function zhifubaoLink(url, params, target) {
     tempform.submit();
     document.body.removeChild(tempform);
 }
+
+var zfb_state = 0;
+
 $('.tozhifubao').on('click', function () {
+    console.log('test1')
     zhifubaoLink(
         ZHIFU_DATA.zhifubao_URL,
         {
             vip_id: ZHIFU_DATA.vip_id,
-            pay_type: ZHIFU_DATA.pay_type,
+            pay_type: 1,
             click_type: ZHIFU_DATA.click_type
         },
         '_blank'
@@ -115,7 +122,7 @@ function refeshLink(url) {
             url: url,
             data: {
                 vip_id: ZHIFU_DATA.vip_id,
-                pay_type: ZHIFU_DATA.pay_type,
+                pay_type: 4,
                 click_type: ZHIFU_DATA.click_type
             },
             dataType: 'json',
@@ -224,3 +231,7 @@ function outputQRCod(txt) {
         text: str
     });
 }
+
+$(window).load(function() {
+    initSelect();
+})

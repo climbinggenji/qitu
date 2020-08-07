@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,18 @@
     <link rel="stylesheet" href="../css/iconfont/iconfont.css">
     <script src="../js/jquery.min.js"></script>
 </head>
+
 <body>
+    <!--[if lt IE9]>
+    <script src="https://cdn.bootcdn.net/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <noscript>
+    <style>.html5-wrappers{display:none!important;}</style>
+    <div class="ie-noscript-warning">您的浏览器禁用了脚本，请<a href="">查看这里</a>来启用脚本!或者<a href="/?noscript=1">继续访问</a>.
+    </div>
+    </noscript>
+    <![endif]-->
     <!-- 顶部导航 -->
     <div id="top"></div>
     <div id="header" class="header">
@@ -65,7 +77,7 @@
                 </div>
                 <div class="header-touxiang fr">
                     <div class="header-touxiang-pic">
-                        <img src="//js.photophoto.cn/web/v1/imgs/touxiang.png">
+                        <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/touxiang.png">
                         <i class="iconfont vip">&#xe63c;</i>
                     </div>
                     <div class="user-info-contain">
@@ -78,7 +90,7 @@
                                     </div>
                                 </div>
                                 <div class="user-info-pic">
-                                    <img src="//js.photophoto.cn/web/v1/imgs/touxiang.png">
+                                    <img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/touxiang.png">
                                 </div>
                                 <div class="user-info-name">梁朝伟Tony</div>
                                 <div class="user-info-userid">ID:51954321</div>
@@ -105,7 +117,8 @@
                                 </ul>
                                 <div class="user-info-banner">
                                     <a href="vip.html">
-                                        <img src="//js.photophoto.cn/web/v1/imgs/header-touxiang-banner.png">
+                                        <img class="lazy"
+                                            data-original="//js.photophoto.cn/web/v1/imgs/header-touxiang-banner.png">
                                     </a>
                                 </div>
                             </div>
@@ -267,282 +280,60 @@
         </div>
     </div>
     <!-- 次级页面内容 -->
-    <div class="secondary-content contain">
-        <div class="flex-images mt30">
-            <div class="item" data-w="600" data-h="800">
-                <a href="">
-                    <div class="item-img">
-                        <img src="../imgs/ex1.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div>
-            </div>
-            <div class="item" data-w="290" data-h="400"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/ex2.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="374" data-h="246"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/ex3.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="374" data-h="246"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/ex4.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="200" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="100" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="180" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="185" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="350" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="200" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="165" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="150" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="120" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="120" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="140" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="200" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
-            <div class="item" data-w="170" data-h="150"><a href="">
-                    <div class="item-img">
-                        <img src="../imgs/preview.png">
-                    </div>
-                </a>
-                <a href="" class="preview-mask"></a>
-                <div class="preview-main">
-                    <div class="preview-main-tag clearfix">
-                        <div class="preview-main-btn fl mr15">立即下载</div>
-                        <div class="preview-main-favor fl">
-                            <span class="favor-text font12">收藏</span>
-                        </div>
-                        <div class="preview-main-colected font12 fl">已收藏</div>
-                    </div>
-                    <div class="preview-main-title"><a href="">海报 · 5G急速网络</a></div>
-                </div></div>
+    <div id="Masonry" class="contain">
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex6.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex3.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex2.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex7.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex8.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex6.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex1.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex6.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex1.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex6.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex3.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex6.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex4.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex5.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex5.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex8.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex2.png"></a>
+        </div>
+        <div class="Masonry-item">
+            <a href=""><img class="lazy" data-original="//js.photophoto.cn/web/v1/imgs/ex4.png"></a>
         </div>
     </div>
     <!-- 分页器 -->
@@ -552,7 +343,7 @@
             <div class="page-list"></div>
             <div class="page-down btn" data-value="down">下一页</div>
             <div class="page-current">到<input id="page-go" value="1">页</div>
-            <div class="page-go btn"  data-value="go">前往</div>
+            <div class="page-go btn" data-value="go">前往</div>
         </div>
     </div>
     <!-- 页面底部 -->
@@ -574,7 +365,9 @@
             </div>
             <div class="copyright">
                 <p>图行天下图库图片内容由用户免费分享产生，若发现您的权利被侵害，请联系photophoto.cn@163.com，我们尽快处理</p>
-                <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 <a target="_blank" href="https://www.51.la/?comId=20789521">网站统计</a> <a target="_blank" href="https://www.cnzz.com/stat/website.php?web_id=1262691885">站长统计</a></p>
+                <p>Copyright © 2005-2019 图行天下 苏ICP备11053918号-1 <a target="_blank"
+                        href="https://www.51.la/?comId=20789521">网站统计</a> <a target="_blank"
+                        href="https://www.cnzz.com/stat/website.php?web_id=1262691885">站长统计</a></p>
             </div>
         </div>
     </div>
@@ -596,21 +389,39 @@
     <script src="../js/plugins/paging.js"></script>
     <script src="../js/plugins/jquery.flex-images.min.js"></script>
     <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/plugins/paging.main.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/plugins/masonry.pkgd.min.js"></script>
+    <script src="//js.photophoto.cn/web/v1/js/plugins/lazyload.min.js"></script>
     <script>
-        $(function() {
+        $(function () {
             // 分页器
             var pageDefault = {
                 count: 181,
                 pageCount: 20,
                 pageCurrent: 2
             }
-            pageDefault.total = Math.ceil(pageDefault.count/pageDefault.pageCount);
+            pageDefault.total = Math.ceil(pageDefault.count / pageDefault.pageCount);
             $('.page').paging(pageDefault);
-            $('.flex-images').flexImages({rowHeight: 400,truncate: true});
-            $(".lazy").lazyload();
+            $('.lazy').lazyload();
+        })
+        $(window).resize(function () {
+            if (window.innerWidth > 1280) {
+                waterfall(301, 18)
+            } else {
+                waterfall(237, 18)
+            }
+        })
+
+        $(window).load(function () {
+            if (window.innerWidth > 1280) {
+                waterfall(301, 18)
+            } else {
+                waterfall(237, 18)
+            }
+            // $('.lazy').lazyload();
         })
     </script>
-    <script src="../js/common.js"></script>
-    <script src="../js/plugins/paging.main.js"></script>
 </body>
+
 </html>

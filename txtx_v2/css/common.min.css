@@ -199,13 +199,13 @@
 
 #bread .bread-list ul li span { padding: 0 6px; }
 
-.download h2 { font-size: 20px; font-weight: 500; }
+.download h1 { font-size: 20px; font-weight: 500; }
 
-.download-content { margin-top: 30px; }
+.download-content { margin-top: 10px; }
 
 .download-content-image { background-color: #fff; padding: 15px 30px; width: 780px; position: relative; border-radius: 4px; box-shadow: 0px 2px 10px 0px rgba(31, 31, 31, 0.1); }
 
-.download-content-image .report { cursor: pointer; position: absolute; top: 20px; right: 60px; font-size: 12px; color: #999; }
+.download-content-image .report { cursor: pointer; position: absolute; top: 20px; right: 30px; font-size: 12px; color: #999; }
 
 .download-content-image .report:hover { color: #e02e2e; }
 
@@ -265,7 +265,7 @@
 
 .download-content .download-right-main .title .label { color: #666; }
 
-.download-content .download-right-main .tag-box .tag-item { border: 1px solid #ebebeb; border-radius: 15px; float: left; letter-spacing: 1px; padding: 5px 20px; color: #666; font-size: 14px; margin: 10px 20px 0 0; }
+.download-content .download-right-main .tag-box .tag-item { border: 1px solid #e0e0e0; border-radius: 14px; float: left; letter-spacing: 1px; padding: 0 12px; line-height: 26px; color: #808080; font-size: 12px; margin: 12px 15px 0 0; }
 
 .download-content .download-right-main .tag-box .tag-item:hover { border: 1px solid #e02e2e; color: #e02e2e; }
 
@@ -275,6 +275,12 @@
   .download .download-right .collect-btn { width: 128px; } }
 
 .recommend-title { font-size: 18px; letter-spacing: 2px; }
+
+.Masonry-item { width: 301px; margin-top: 18px; }
+
+@media screen and (max-width: 1280px) { .Masonry-item { width: 237px; } }
+
+.Masonry-item img { width: 100%; }
 
 .xiazai-content { background: #ffffff; border-radius: 4px; box-shadow: 0px 2px 10px 0px rgba(31, 31, 31, 0.1); overflow: hidden; margin-top: 30px; }
 
@@ -420,7 +426,7 @@
 
 .flex-images .item { float: left; margin: 4px; border: 1px solid #eee; box-sizing: content-box; overflow: hidden; position: relative; }
 
-.flex-images .item img { display: block; width: auto; height: 100%; }
+.flex-images .item img { display: block; width: 100%; height: 100%; }
 
 .paging-mini span { height: 26px; line-height: 26px; }
 

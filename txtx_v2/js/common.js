@@ -25,6 +25,14 @@ function debounce(fn, delay, immediate) {
     };
 }
 
+function thirdLogin() {
+    console.log(123)
+    var win = window.open('','QQ登录图行天下', 'width=600,height=520,top=300,resizable=no');
+    setTimeout(function() {
+        win.close()
+    }, 3000);
+}
+
 // 监听滚动固定顶部导航栏
 function showTop() {
     var top = $('body, html').scrollTop();
@@ -75,8 +83,28 @@ var isPageMiniDisable = function (current) {
     if (current == 1) $('.icon-left').addClass('disable');
     if (current == 28) $('.icon-right').addClass('disable');
 }
+
+// 瀑布流
+function waterfall(columnWidth, gutter) {
+    $('#Masonry').masonry({
+        columnWidth: columnWidth,
+        itemSelector: '.Masonry-item', // 要布局的网格元素
+        gutter: gutter, // 网格间水平方向边距，垂直方向边距使用css的margin-bottom设置
+        stamp: '.Masonry-stamp', // 网格中的固定元素，不会因重新布局改变位置，移动元素填充到固定元素下方
+        originLeft: true, // 默认true网格左对齐，设为false变为右对齐
+        originTop: true, // 默认true网格对齐顶部，设为false对齐底部
+        containerStyle: {
+            position: 'relative'
+        }, // 设置容器样式
+        transitionDuration: '0.8s', // 改变位置或变为显示后，重布局变换的持续时间，时间格式为css的时间格式
+        stagger: '0.03s', // 重布局时网格并不是一起变换的，排在后面的网格比前一个延迟开始，该项设置延迟时间  
+        resize: false, // 改变窗口大小将不会影响布局
+        initLayout: true, // 初始化布局，设未true可手动初试化布局
+    })
+}
+
 $(function () {
-    footerBottom()
+    footerBottom();
     let current = parseInt($('#paging-mini-current').text());
     isPageMiniDisable(current);
     $('.icon-right').click(function () {

@@ -1087,10 +1087,7 @@ html {
 }
 
 // 个人中心首页弹窗
-#change-phone {
-    width: 450px;
-    margin-top: -150px;
-    margin-left: -225px;
+.pop-gerenzhongxin {
     .title {
         font-size: 14px;
         height: 40px;
@@ -1142,11 +1139,43 @@ html {
                 border-radius: 0px 4px 4px 0px;
                 text-align: center;
                 font-size: 14px;
+                cursor: pointer;
                 &:hover {
                     background: #fff;
                     color: #e02e2e;
                 }
             }
         }
+        &-btn {
+            text-align: center;
+            .pop-btn {
+                width: 120px;
+                height: 36px;
+                line-height: 36px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .btn-cancel {
+                color: #666;
+                background-color: #fff;
+                border: 1px solid #e5e5e5;
+                &:hover {
+                    background-color: #f7f7f7;
+                }
+            }
+            .btn-correct {
+                color: #fff;
+                background-color: #e02e2e;
+                border: 1px solid #e02e2e;
+                &:hover {
+                    background: #e54d4d;
+                }
+            }
+        }
     }
+}
+#change-phone {
+    width: 450px;
+    margin-top: -150px;
+    margin-left: -225px;
 }

@@ -329,25 +329,37 @@ html { overflow-y: scroll; }
 
 .step-box .active span { left: -8px; color: #333; }
 
+.pop-gerenzhongxin .title { font-size: 14px; height: 40px; line-height: 40px; border-bottom: 1px solid #EDEFF5; text-indent: 20px; }
+
+.pop-gerenzhongxin .content { height: 199px; padding: 30px 52px; }
+
+.pop-gerenzhongxin .content-head { text-align: center; }
+
+.pop-gerenzhongxin .content-head .user-phone { font-size: 14px; font-weight: 700; }
+
+.pop-gerenzhongxin .content-head .mention { margin-left: 12px; font-size: 12px; color: #999; }
+
+.pop-gerenzhongxin .content-head .mention a { color: #FF6600; }
+
+.pop-gerenzhongxin .content-head .mention a:hover { text-decoration: underline; }
+
+.pop-gerenzhongxin .content-yanzhengma input { width: 251px; float: left; height: 36px; line-height: 36px; border: 1px solid #edeff5; border-right: none; border-radius: 4px 0 0 4px; font-size: 14px; text-indent: 10px; }
+
+.pop-gerenzhongxin .content-yanzhengma-send { float: left; width: 92px; height: 36px; line-height: 36px; color: #fff; background: #e02e2e; border: 1px solid #e02e2e; border-radius: 0px 4px 4px 0px; text-align: center; font-size: 14px; cursor: pointer; }
+
+.pop-gerenzhongxin .content-yanzhengma-send:hover { background: #fff; color: #e02e2e; }
+
+.pop-gerenzhongxin .content-btn { text-align: center; }
+
+.pop-gerenzhongxin .content-btn .pop-btn { width: 120px; height: 36px; line-height: 36px; border-radius: 4px; cursor: pointer; }
+
+.pop-gerenzhongxin .content-btn .btn-cancel { color: #666; background-color: #fff; border: 1px solid #e5e5e5; }
+
+.pop-gerenzhongxin .content-btn .btn-cancel:hover { background-color: #f7f7f7; }
+
+.pop-gerenzhongxin .content-btn .btn-correct { color: #fff; background-color: #e02e2e; border: 1px solid #e02e2e; }
+
+.pop-gerenzhongxin .content-btn .btn-correct:hover { background: #e54d4d; }
+
 #change-phone { width: 450px; margin-top: -150px; margin-left: -225px; }
-
-#change-phone .title { font-size: 14px; height: 40px; line-height: 40px; border-bottom: 1px solid #EDEFF5; text-indent: 20px; }
-
-#change-phone .content { height: 199px; padding: 30px 52px; }
-
-#change-phone .content-head { text-align: center; }
-
-#change-phone .content-head .user-phone { font-size: 14px; font-weight: 700; }
-
-#change-phone .content-head .mention { margin-left: 12px; font-size: 12px; color: #999; }
-
-#change-phone .content-head .mention a { color: #FF6600; }
-
-#change-phone .content-head .mention a:hover { text-decoration: underline; }
-
-#change-phone .content-yanzhengma input { width: 251px; float: left; height: 36px; line-height: 36px; border: 1px solid #edeff5; border-right: none; border-radius: 4px 0 0 4px; font-size: 14px; text-indent: 10px; }
-
-#change-phone .content-yanzhengma-send { float: left; width: 92px; height: 36px; line-height: 36px; color: #fff; background: #e02e2e; border: 1px solid #e02e2e; border-radius: 0px 4px 4px 0px; text-align: center; font-size: 14px; }
-
-#change-phone .content-yanzhengma-send:hover { background: #fff; color: #e02e2e; }
 /*# sourceMappingURL=user.min.css.map */
